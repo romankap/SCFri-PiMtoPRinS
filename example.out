@@ -1,0 +1,15 @@
+\BOOKMARK [1][-]{section.1}{Motivation}{}% 1
+\BOOKMARK [1][-]{section.2}{Background and Related Work}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Content Addressable Memory and Associative Processing}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Resistive Memories}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Related Work}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Processing-in-Storage with ReCAM}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{ReCAM Crossbar Array}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{System Architecture}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{PRinS Application: Smith-Waterman DNA Sequence Alignment}{}% 9
+\BOOKMARK [2][-]{subsection.4.1}{simulation and comparison to state-of-the-art}{section.4}% 10
+\BOOKMARK [1][-]{section.5}{PRinS Application: In-Storage Data Deduplication}{}% 11
+\BOOKMARK [2][-]{subsection.5.1}{Related Work: Conventional Deduplication}{section.5}% 12
+\BOOKMARK [2][-]{subsection.5.2}{In-Storage ReCAM Based Deduplication}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.3}{In-Storage Deduplication Evaluations}{section.5}% 14
+\BOOKMARK [1][-]{section.6}{Conclusions}{}% 15
