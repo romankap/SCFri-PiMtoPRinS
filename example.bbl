@@ -1,11 +1,48 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
+
+\bibitem{ahn2015scalable}
+Ahn, J., Hong, S., Yoo, S., Mutlu, O., Choi, K.: A scalable
+  processing-in-memory accelerator for parallel graph processing. In: Computer
+  Architecture (ISCA), 2015 ACM/IEEE 42nd Annual International Symposium on.
+  pp. 105--117. IEEE (2015)
+
+\bibitem{ahn2015pim}
+Ahn, J., Yoo, S., Mutlu, O., Choi, K.: Pim-enabled instructions: A
+  low-overhead, locality-aware processing-in-memory architecture. In: Computer
+  Architecture (ISCA), 2015 ACM/IEEE 42nd Annual International Symposium on.
+  pp. 336--348. IEEE (2015)
+
+\bibitem{akinaga2010resistive}
+Akinaga, H., Shima, H.: Resistive random access memory (reram) based on metal
+  oxides. Proceedings of the IEEE  98(12),  2237--2251 (2010)
+
+\bibitem{azarkhish2017logic}
+Azarkhish, E., Pfister, C., Rossi, D., Loi, I., Benini, L.: Logic-base
+  interconnect design for near memory computing in the smart memory cube. IEEE
+  Transactions on Very Large Scale Integration (VLSI) Systems  25(1),  210--223
+  (2017)
+
+\bibitem{balasubramonian2014near}
+Balasubramonian, R., Chang, J., Manning, T., Moreno, J.H., Murphy, R., Nair,
+  R., Swanson, S.: Near-data processing: Insights from a micro-46 workshop.
+  IEEE Micro  34(4),  36--42 (2014)
+
+\bibitem{boboila2012active}
+Boboila, S., Kim, Y., Vazhkudai, S.S., Desnoyers, P., Shipman, G.M.: Active
+  flash: Out-of-core data analytics on flash storage. In: Mass Storage Systems
+  and Technologies (MSST), 2012 IEEE 28th Symposium on. pp. 1--12. IEEE (2012)
 
 \bibitem{chen2011caftl}
 Chen, F., Luo, T., Zhang, X.: Caftl: A content-aware flash translation layer
   enhancing the lifespan of flash memory based solid state drives. In: FAST.
   vol.~11, pp. 77--90 (2011)
+
+\bibitem{cho2013xsd}
+Cho, B.Y., Jeong, W.S., Oh, D., Ro, W.W.: Xsd: Accelerating mapreduce by
+  harnessing the gpu inside an ssd. In: Proceedings of the 1st Workshop on
+  Near-Data Processing (2013)
 
 \bibitem{intelPCM}
 Corporation, I.: Intel performance counter moniter.
@@ -16,11 +53,83 @@ Debnath, B.K., Sengupta, S., Li, J.: Chunkstash: Speeding up inline storage
   deduplication using flash memory. In: USENIX annual technical conference. pp.
   1--16 (2010)
 
+\bibitem{esmaeilzadeh2011dark}
+Esmaeilzadeh, H., Blem, E., St~Amant, R., Sankaralingam, K., Burger, D.: Dark
+  silicon and the end of multicore scaling. In: ACM SIGARCH Computer
+  Architecture News. vol.~39, pp. 365--376. ACM (2011)
+
+\bibitem{foster1976content}
+Foster, C.C.: Content addressable parallel processors. John Wiley \& Sons, Inc.
+  (1976)
+
+\bibitem{giridhar2013exploring}
+Giridhar, B., Cieslak, M., Duggal, D., Dreslinski, R., Chen, H.M., Patti, R.,
+  Hold, B., Chakrabarti, C., Mudge, T., Blaauw, D.: Exploring dram
+  organizations for energy-efficient and resilient exascale memories. In:
+  Proceedings of the International Conference on High Performance Computing,
+  Networking, Storage and Analysis. p.~23. ACM (2013)
+
+\bibitem{guo2011resistive}
+Guo, Q., Guo, X., Bai, Y., Ipek, E.: A resistive tcam accelerator for
+  data-intensive computing. In: Proceedings of the 44th Annual IEEE/ACM
+  International Symposium on Microarchitecture. pp. 339--350. ACM (2011)
+
+\bibitem{guo2013ac}
+Guo, Q., Guo, X., Patel, R., Ipek, E., Friedman, E.G.: Ac-dimm: associative
+  computing with stt-mram. ACM SIGARCH Computer Architecture News  41(3),
+  189--200 (2013)
+
+\bibitem{kaisler2013big}
+Kaisler, S., Armour, F., Espinosa, J.A., Money, W.: Big data: Issues and
+  challenges moving forward. In: System Sciences (HICSS), 2013 46th Hawaii
+  International Conference on. pp. 995--1004. IEEE (2013)
+
+\bibitem{kang2013enabling}
+Kang, Y., Kee, Y.s., Miller, E.L., Park, C.: Enabling cost-effective data
+  processing with smart ssd. In: Mass Storage Systems and Technologies (MSST),
+  2013 IEEE 29th Symposium on. pp. 1--12. IEEE (2013)
+
+\bibitem{kaplan2017resistive}
+Kaplan, R., Yavits, L., Ginosar, R., Weiser, U.: A resistive cam
+  processing-in-storage architecture for dna sequence alignment. arXiv preprint
+  arXiv:1701.04723  (2017)
+
+\bibitem{kogge1999short}
+Kogge, P.: A short history of pim at notre dame. July1999  (1999)
+
+\bibitem{liu2014swaphi}
+Liu, Y., Schmidt, B.: Swaphi: Smith-waterman protein database search on xeon
+  phi coprocessors. In: Application-specific Systems, Architectures and
+  Processors (ASAP), 2014 IEEE 25th International Conference On. pp. 184--185.
+  IEEE (2014)
+
 \bibitem{norcott2003iozone}
 Norcott, W.D., Capps, D.: Iozone filesystem benchmark (2003)
 
+\bibitem{de2016cudalign}
+de~Oliveira~Sandes, E.F., Miranda, G., Martorell, X., Ayguade, E., Teodoro, G.,
+  Melo, A.C.M.: Cudalign 4.0: incremental speculative traceback for exact
+  chromosome-wide alignment in gpu clusters. IEEE Transactions on Parallel and
+  Distributed Systems  27(10),  2838--2850 (2016)
+
+\bibitem{shafiee2016isaac}
+Shafiee, A., Nag, A., Muralimanohar, N., Balasubramonian, R., Strachan, J.P.,
+  Hu, M., Williams, R.S., Srikumar, V.: Isaac: A convolutional neural network
+  accelerator with in-situ analog arithmetic in crossbars. In: Proceedings of
+  the 43rd International Symposium on Computer Architecture. pp. 14--26. IEEE
+  Press (2016)
+
 \bibitem{silverberg2010opendedup}
 Silverberg, S.: “opendedup sdfs (2010)
+
+\bibitem{smith1981identification}
+Smith, T.F., Waterman, M.S.: Identification of common molecular subsequences.
+  Journal of molecular biology  147(1),  195--197 (1981)
+
+\bibitem{wienbrandt2014fpga}
+Wienbrandt, L.: The fpga-based high-performance computer rivyera for
+  applications in bioinformatics. In: Conference on Computability in Europe.
+  pp. 383--392. Springer (2014)
 
 \bibitem{XbrickSpec}
 XtremIO, E.: {X-Brick tech spec.}
