@@ -69,11 +69,6 @@ Guo, Q., Guo, X., Patel, R., Ipek, E., Friedman, E.G.: Ac-dimm: associative
   computing with stt-mram. ACM SIGARCH Computer Architecture News  41(3),
   189--200 (2013)
 
-\bibitem{kaisler2013big}
-Kaisler, S., Armour, F., Espinosa, J.A., Money, W.: Big data: Issues and
-  challenges moving forward. In: System Sciences (HICSS), 2013 46th Hawaii
-  International Conference on. pp. 995--1004. IEEE (2013)
-
 \bibitem{kaplan2017resistive}
 Kaplan, R., Yavits, L., Ginosar, R., Weiser, U.: A resistive cam
   processing-in-storage architecture for dna sequence alignment. arXiv preprint
@@ -84,9 +79,6 @@ Kaplan, R., Yavits, L., Morad, A., Ginosar, R.: Deduplication in resistive
   content addressable memory based solid state drive. In: Power and Timing
   Modeling, Optimization and Simulation (PATMOS), 2016 26th International
   Workshop on. pp. 100--106. IEEE (2016)
-
-\bibitem{kogge1999short}
-Kogge, P.: A short history of pim at notre dame. July1999  (1999)
 
 \bibitem{liu2014swaphi}
 Liu, Y., Schmidt, B.: Swaphi: Smith-waterman protein database search on xeon
@@ -102,6 +94,10 @@ de~Oliveira~Sandes, E.F., Miranda, G., Martorell, X., Ayguade, E., Teodoro, G.,
   Melo, A.C.M.: Cudalign 4.0: incremental speculative traceback for exact
   chromosome-wide alignment in gpu clusters. IEEE Transactions on Parallel and
   Distributed Systems  27(10),  2838--2850 (2016)
+
+\bibitem{potter1989array}
+Potter, J., Meilander, W.: Array processor supercomputers. Proceedings of the
+  IEEE  77(12),  1896--1914 (1989)
 
 \bibitem{silverberg2010opendedup}
 Silverberg, S.: “opendedup sdfs (2010)

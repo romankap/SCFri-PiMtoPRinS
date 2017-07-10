@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.10)  10 JUL 2017 10:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.6)  10 JUL 2017 10:54
 entering extended mode
 **./example.tex
 (example.tex
@@ -50,11 +50,11 @@ File: babel.def 2017/05/19 3.10 Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(C:\Users\Roman\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(C:\Users\Roman\AppData\Roaming\MiKTeX\2.9\tex\latex\totcount\totcount.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\totcount\totcount.sty"
 Package: totcount 2011/01/25 v1.2 package for gettingthe total value of LaTeX c
 ounters
 
@@ -153,11 +153,12 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box26
 \enitdp@description=\count91
 )
-(C:\Users\Roman\AppData\Roaming\MiKTeX\2.9\tex\latex\changepage\changepage.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\changepage\changepage.sty"
 Package: changepage 2009/10/20 v1.0c check page and change page layout
 \c@cp@cntr=\count92
 \cp@tempcnt=\count93
-) (C:\Users\Roman\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyvrb\fancyvrb.sty
+)
+(C:\Users\Roman\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyvrb\fancyvrb.sty
 Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
@@ -168,8 +169,7 @@ Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
 \c@FancyVerbLine=\count95
 \FV@StepNumber=\count96
 \FV@OutFile=\write3
-)
-(C:\Users\Roman\AppData\Roaming\MiKTeX\2.9\tex\latex\cite\cite.sty
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\cite\cite.sty"
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
@@ -382,12 +382,10 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@every@algorithm=\toks19
 \c@algorithm=\count121
 )
-(C:\Users\Roman\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithmicx\algpseudocode
-.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algpseudocode.sty"
 Package: algpseudocode 
 
-(C:\Users\Roman\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithmicx\algorithmicx.
-sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algorithmicx.sty"
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
@@ -1150,19 +1148,19 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-<Figures/In_vs_near_data.jpg, id=125, 377.7312pt x 219.7008pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+<Figures/In_vs_near_data.jpg, id=131, 377.7312pt x 219.7008pt>
 File: Figures/In_vs_near_data.jpg Graphic file (type jpg)
 
 <use Figures/In_vs_near_data.jpg>
-Package pdftex.def Info: Figures/In_vs_near_data.jpg used on input line 79.
+Package pdftex.def Info: Figures/In_vs_near_data.jpg used on input line 102.
 (pdftex.def)             Requested size: 377.73027pt x 219.70026pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3 <./Figures/In_vs_near_data.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4]
+ [4 <./Figures/In_vs_near_data.jpg>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1170,31 +1168,20 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
-<Figures/ReCAM_array.jpg, id=160, 755.9442pt x 566.8377pt>
+<Figures/ReCAM_array.jpg, id=156, 755.9442pt x 566.8377pt>
 File: Figures/ReCAM_array.jpg Graphic file (type jpg)
 
 <use Figures/ReCAM_array.jpg>
-Package pdftex.def Info: Figures/ReCAM_array.jpg used on input line 139.
+Package pdftex.def Info: Figures/ReCAM_array.jpg used on input line 141.
 (pdftex.def)             Requested size: 302.37231pt x 226.73106pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6 <./Figures/ReCAM_array.jpg>]
-<Figures/ReCAM_Single_IC_Column.jpg, id=171, 505.1673pt x 402.7848pt>
+<Figures/ReCAM_Single_IC_Column.jpg, id=160, 505.1673pt x 402.7848pt>
 File: Figures/ReCAM_Single_IC_Column.jpg Graphic file (type jpg)
 
 <use Figures/ReCAM_Single_IC_Column.jpg>
 Package pdftex.def Info: Figures/ReCAM_Single_IC_Column.jpg used on input line 
-154.
+156.
 (pdftex.def)             Requested size: 303.1027pt x 241.67274pt.
-
-<Figures/SW_on_ReCAM_Figure.jpg, id=173, 681.2652pt x 329.5512pt>
-File: Figures/SW_on_ReCAM_Figure.jpg Graphic file (type jpg)
-
-<use Figures/SW_on_ReCAM_Figure.jpg>
-Package pdftex.def Info: Figures/SW_on_ReCAM_Figure.jpg used on input line 166.
-
-(pdftex.def)             Requested size: 408.76227pt x 197.73222pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1202,51 +1189,73 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [6 <./Figures/ReCAM_array.jpg>]
+<Figures/SW_on_ReCAM_Figure.jpg, id=168, 681.2652pt x 329.5512pt>
+File: Figures/SW_on_ReCAM_Figure.jpg Graphic file (type jpg)
+
+<use Figures/SW_on_ReCAM_Figure.jpg>
+Package pdftex.def Info: Figures/SW_on_ReCAM_Figure.jpg used on input line 168.
+
+(pdftex.def)             Requested size: 408.76227pt x 197.73222pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [7 <./Figures/ReCAM_Single_IC_Column.jpg>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8 <./Figures/SW_on_ReCAM_Figure.jpg>]
-<Figures/dedup_PC.jpg, id=202, 420.06938pt x 374.90062pt>
+<Figures/dedup_PC.jpg, id=199, 420.06938pt x 374.90062pt>
 File: Figures/dedup_PC.jpg Graphic file (type jpg)
 
 <use Figures/dedup_PC.jpg>
-Package pdftex.def Info: Figures/dedup_PC.jpg used on input line 219.
+Package pdftex.def Info: Figures/dedup_PC.jpg used on input line 221.
 (pdftex.def)             Requested size: 252.04358pt x 224.94211pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3482) has occurred while \output is active []
 
- [9]
-<Figures/dedup_ReCAM.jpg, id=217, 309.40594pt x 368.1253pt>
+ [9 <./Figures/dedup_PC.jpg>] <Figures/dedup_ReCAM.jpg, id=214, 309.40594pt x 3
+68.1253pt>
 File: Figures/dedup_ReCAM.jpg Graphic file (type jpg)
 
 <use Figures/dedup_ReCAM.jpg>
-Package pdftex.def Info: Figures/dedup_ReCAM.jpg used on input line 234.
+Package pdftex.def Info: Figures/dedup_ReCAM.jpg used on input line 236.
 (pdftex.def)             Requested size: 185.64499pt x 220.87688pt.
-
-Underfull \vbox (badness 1062) has occurred while \output is active []
-
- [10 <./Figures/dedup_PC.jpg>]
-Package mdframed Info: mdframed works in twoside mode on input line 263.
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 304.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 304.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11 <./Figures/dedup_ReCAM.jpg>] [12]
-<Figures/dedup_perf.jpg, id=249, 254.3904pt x 177.3024pt>
+ [10 <./Figures/dedup_ReCAM.jpg>]
+Package mdframed Info: mdframed works in twoside mode on input line 265.
+Package mdframed Info: mdframed inside float 
+ mdframed uses option nobreak mdframed on input line 306.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 306.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+[12] <Figures/dedup_perf.jpg, id=246, 254.3904pt x 177.3024pt>
 File: Figures/dedup_perf.jpg Graphic file (type jpg)
 
 <use Figures/dedup_perf.jpg>
-Package pdftex.def Info: Figures/dedup_perf.jpg used on input line 329.
+Package pdftex.def Info: Figures/dedup_perf.jpg used on input line 331.
 (pdftex.def)             Requested size: 254.38977pt x 177.30194pt.
 
-<Figures/dedup_energy.jpg, id=250, 245.718pt x 166.7028pt>
+<Figures/dedup_energy.jpg, id=247, 245.718pt x 166.7028pt>
 File: Figures/dedup_energy.jpg Graphic file (type jpg)
 
 <use Figures/dedup_energy.jpg>
-Package pdftex.def Info: Figures/dedup_energy.jpg used on input line 335.
+Package pdftex.def Info: Figures/dedup_energy.jpg used on input line 337.
 (pdftex.def)             Requested size: 245.71739pt x 166.70238pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1258,17 +1267,17 @@ LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 39.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd"
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [14]
-Underfull \hbox (badness 5359) in paragraph at lines 119--122
+Underfull \hbox (badness 5359) in paragraph at lines 115--118
 []\OT1/lmr/m/n/11 XtremIO, E.: X-Brick tech spec. []$\OT1/lmtt/m/n/11 https : /
  / www . emc . com / collateral / data-[]sheet /
  []
 
-[15]) [16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 353.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 353.
+) [15]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 355.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 355.
  (example.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 353.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 353.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 355.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 355.
 Package rerunfilecheck Info: File `example.out' has not changed.
 (rerunfilecheck)             Checksum: 672072DCCF43940F006404616AAC767B;1522.
 
@@ -1278,13 +1287,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 353.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 355.
  ) 
 Here is how much of TeX's memory you used:
- 28185 strings out of 493323
- 545662 string characters out of 3139066
- 608128 words of memory out of 3000000
- 31225 multiletter control sequences out of 15000+200000
+ 28182 strings out of 493323
+ 545394 string characters out of 3139067
+ 609091 words of memory out of 3000000
+ 31224 multiletter control sequences out of 15000+200000
  591185 words of font info for 67 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,12n,73p,10398b,1068s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1304,9 +1313,9 @@ onts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /lm/lmri9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy9.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
-Output written on example.pdf (16 pages, 2731104 bytes).
+Output written on example.pdf (15 pages, 2728967 bytes).
 PDF statistics:
- 347 PDF objects out of 1000 (max. 8388607)
- 77 named destinations out of 1000 (max. 500000)
+ 339 PDF objects out of 1000 (max. 8388607)
+ 75 named destinations out of 1000 (max. 500000)
  205 words of extra memory for PDF output out of 10000 (max. 10000000)
 
