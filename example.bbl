@@ -29,20 +29,10 @@ Balasubramonian, R., Chang, J., Manning, T., Moreno, J.H., Murphy, R., Nair,
   R., Swanson, S.: Near-data processing: Insights from a micro-46 workshop.
   IEEE Micro  34(4),  36--42 (2014)
 
-\bibitem{boboila2012active}
-Boboila, S., Kim, Y., Vazhkudai, S.S., Desnoyers, P., Shipman, G.M.: Active
-  flash: Out-of-core data analytics on flash storage. In: Mass Storage Systems
-  and Technologies (MSST), 2012 IEEE 28th Symposium on. pp. 1--12. IEEE (2012)
-
 \bibitem{chen2011caftl}
 Chen, F., Luo, T., Zhang, X.: Caftl: A content-aware flash translation layer
   enhancing the lifespan of flash memory based solid state drives. In: FAST.
   vol.~11, pp. 77--90 (2011)
-
-\bibitem{cho2013xsd}
-Cho, B.Y., Jeong, W.S., Oh, D., Ro, W.W.: Xsd: Accelerating mapreduce by
-  harnessing the gpu inside an ssd. In: Proceedings of the 1st Workshop on
-  Near-Data Processing (2013)
 
 \bibitem{intelPCM}
 Corporation, I.: Intel performance counter moniter.
@@ -84,15 +74,16 @@ Kaisler, S., Armour, F., Espinosa, J.A., Money, W.: Big data: Issues and
   challenges moving forward. In: System Sciences (HICSS), 2013 46th Hawaii
   International Conference on. pp. 995--1004. IEEE (2013)
 
-\bibitem{kang2013enabling}
-Kang, Y., Kee, Y.s., Miller, E.L., Park, C.: Enabling cost-effective data
-  processing with smart ssd. In: Mass Storage Systems and Technologies (MSST),
-  2013 IEEE 29th Symposium on. pp. 1--12. IEEE (2013)
-
 \bibitem{kaplan2017resistive}
 Kaplan, R., Yavits, L., Ginosar, R., Weiser, U.: A resistive cam
   processing-in-storage architecture for dna sequence alignment. arXiv preprint
   arXiv:1701.04723  (2017)
+
+\bibitem{kaplan2016deduplication}
+Kaplan, R., Yavits, L., Morad, A., Ginosar, R.: Deduplication in resistive
+  content addressable memory based solid state drive. In: Power and Timing
+  Modeling, Optimization and Simulation (PATMOS), 2016 26th International
+  Workshop on. pp. 100--106. IEEE (2016)
 
 \bibitem{kogge1999short}
 Kogge, P.: A short history of pim at notre dame. July1999  (1999)
@@ -111,13 +102,6 @@ de~Oliveira~Sandes, E.F., Miranda, G., Martorell, X., Ayguade, E., Teodoro, G.,
   Melo, A.C.M.: Cudalign 4.0: incremental speculative traceback for exact
   chromosome-wide alignment in gpu clusters. IEEE Transactions on Parallel and
   Distributed Systems  27(10),  2838--2850 (2016)
-
-\bibitem{shafiee2016isaac}
-Shafiee, A., Nag, A., Muralimanohar, N., Balasubramonian, R., Strachan, J.P.,
-  Hu, M., Williams, R.S., Srikumar, V.: Isaac: A convolutional neural network
-  accelerator with in-situ analog arithmetic in crossbars. In: Proceedings of
-  the 43rd International Symposium on Computer Architecture. pp. 14--26. IEEE
-  Press (2016)
 
 \bibitem{silverberg2010opendedup}
 Silverberg, S.: “opendedup sdfs (2010)

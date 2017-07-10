@@ -38,23 +38,20 @@
 \label{sec:abstract}
 Near-data in-memory processing research has been gaining momentum in recent years. Typical processing-in-memory architecture places a single or several processing elements next to a volatile memory, enabling processing without transferring data to the host CPU. The processing elements benefit from an increased bandwidth to and from the volatile memory. Since this approach does not place processing next to the lowest hierarchy in the von Neumann architecture, i.e., in storage, it is exposed to the problems faced by von Neumann architectures, namely the bandwidth wall. 
 
-The goal of this work is to design a storage device that does not suffer from the von Neumann bandwidth bottleneck and can provide high performance on massively parallel big data workloads. To achieve this, a novel processing-in-storage system based on Resistive Content Addressable Memory (ReCAM) is presented. ReCAM functions simultaneously as storage and as a parallel associative processor. ReCAM processing-in-storage resolves the bandwidth wall by keeping computation inside the storage array, thus implementing in-data, rather than near-data, processing. 
+The goal of this work is to design a storage device that does not suffer from the von Neumann bandwidth bottleneck and can provide high performance on massively parallel workloads. To achieve this, a novel processing-in-storage system based on Resistive Content Addressable Memory (ReCAM) is presented. ReCAM functions simultaneously as storage and as a parallel associative processor. ReCAM processing-in-storage resolves the bandwidth wall by keeping computation inside the storage array, thus implementing in-data, rather than near-data, processing. 
 
-This work shows that ReCAM based processing-in-storage architecture may outperform existing processing-in-memory and accelerator based designs. ReCAM processing-in-storage implementation of Smith-Waterman DNA sequence alignment reaches a speedup of almost five over a GPU cluster. Finally, an implementation of in-storage inline data deduplication is presented and shown to achieve orders of magnitude higher throughput than traditional CPU and DRAM based systems.
+This work shows that ReCAM based processing-in-storage architecture may outperform existing processing-in-memory and accelerator based designs. ReCAM processing-in-storage implementation of Smith-Waterman DNA sequence alignment reaches a speedup of almost five over a GPU cluster. An implementation of in-storage inline data deduplication is presented and shown to achieve orders of magnitude higher throughput than traditional CPU and DRAM based systems.
 
-\section{Background and Motivation}
+\section{Introduction}
 \label{sec:motivation}
-Until the breakdown of Dennard scaling designers focused on improving performance for a single core by increasing its clock rate. Since 2005, when Dennard scaling diminished but Moore's law continued, the focus has shifted to increasing the number of cores in multicore processors \cite{esmaeilzadeh2011dark}. However, in the era of big data \cite{foster1976content}, improved processing elements do not necessarily translate to increased performance. One challenging definition for Big Data is "the amount of data just beyond technology's capability to store, manage and process efficiently" \cite{kaisler2013big}. Large contributors to the increase in the volume of data are social media, Internet of Things (IoT) and multimedia. All have significantly increased the rate of produced data, whether structured or unstructured. Moreover, big data has the potential to transform a plethora of fields, including science, engineering, healthcare, finance and many others.
+Until the breakdown of Dennard scaling designers focused on improving performance for a single core by increasing its clock rate. Since 2005, when Dennard scaling diminished but Moore's law continued, the focus has shifted to increasing the number of cores in multicore processors \cite{esmaeilzadeh2011dark}. Increasing the number of cores allowed to reduce processing time. However, data transfer time did not improve at the same rate, making memory-CPU bandwidth a main bottleneck of performance.
 
-Big data datasets do not fit in DRAM of a single machine or even a cluster of machines. Therefore, data is typically fetched to the CPUs and their memory hierarchies from non-volatile storage such as hard disks or Flash SSDs. Consequently, bandwidth and access-time to storage pose a major concern for Big Data applications. The throughput at which data can be fetched from storage to the processing units (CPU or an accelerator) has become a main determinant of system performance. The problem worsens in a datacenter cloud environment, where a dataset can be distributed among multiple nodes across the datacenter. In this case, communicating the stored data adds latency and reduces bandwidth even further, placing low bounds for maximal performance.
+Data is typically fetched to the CPUs and their memory hierarchies from non-volatile storage such as hard disks or Flash SSDs. Consequently, bandwidth and access-time to storage pose a major constraint to improve performance. The throughput at which data can be fetched from storage to the processing units (CPU or an accelerator) has become a main determinant of system performance. The problem worsens in a datacenter cloud environment, where a dataset can be distributed among multiple nodes across the datacenter. In this case, communicating the stored data adds latency and reduces bandwidth even further, placing low bounds for maximal performance.
 
-This challenge has motivated re-emerging Near-Data Processing (NDP) \cite{balasubramonian2014near}. The data-centric NDP shifts computing closer to data. NDP seeks to minimize data movement by computing at the most appropriate location in the hierarchy, which can be cache, main memory or persistent storage. With NDP, less data needs to be transferred through levels of hierarchy, thus alleviating the limited bandwidth problem. Since storage bandwidth constitutes the key bottleneck in big data processing, NDP proposals that place computing resources at the cache level \cite{yavits2015computer} or in main memory \cite{guo2011resistive}\cite{ahn2015scalable}\cite{de2016cudalign} (also known as Processing-in-Memory or PiM) do not address the bandwidth bottleneck problem facing big data workloads. In-storage NDP targets the source of the problem, but offers only a partial solution.
+This challenge has motivated re-emerging Near-Data Processing (NDP) \cite{balasubramonian2014near}. The data-centric NDP shifts computing closer to data. NDP seeks to minimize data movement by computing at the most appropriate location in the hierarchy, which can be cache, main memory or persistent storage. With NDP, less data needs to be transferred through levels of hierarchy, thus alleviating the limited bandwidth problem. NDP proposals that place computing resources at the cache level \cite{yavits2015computer} or in main memory \cite{guo2011resistive}\cite{ahn2015scalable}\cite{de2016cudalign} (also known as Processing-in-Memory or PiM) do not address the bandwidth bottleneck problem facing workloads with large datasets (or big data). In-storage NDP targets the source of the problem, but offers only a partial solution.
 
-Resistive CAM (ReCAM), a storage device based on emerging resistive materials in the bitcell with a novel non-von Neumann Processing-in-Storage (PRinS) compute paradigm, is proposed in order to mitigate the storage bandwidth bottleneck of big data processing. Section \ref{sec:background} provides background on the basic concepts of ReCAM and PRinS and covers related work. Section \ref{sec:PRinS_with_ReCAM} presents the ReCAM architecture, explains how processing is performed within ReCAM and establishes its scalability. PRinS implementations of two algorithms are presented in Section \ref{sec:smith_waterman} and compared to other approaches: Smith-Waterman DNA sequence alignment and in-storage data deduplication.
+Resistive CAM (ReCAM), a storage device based on emerging resistive materials in the bitcell with a novel non-von Neumann Processing-in-Storage (PRinS) compute paradigm, is proposed in order to mitigate the storage bandwidth bottleneck of big data processing. Section \ref{sec:background} provides background on the basic concepts of ReCAM and PRinS and covers related work. Section \ref{sec:PRinS_with_ReCAM} presents the ReCAM architecture, explains how processing is performed within ReCAM and establishes its scalability. PRinS implementations of two algorithms are presented in Sections \ref{sec:smith_waterman} and \ref{sec:dedup} and compared to other approaches: Smith-Waterman DNA sequence alignment and in-storage data deduplication.
 
-<Review in more depth the in-memory works.>
-
-<Review near-storage architectures>
 
 \section{Background and Related Work}
 \label{sec:backgroud}
@@ -71,7 +68,7 @@ More complex computations (more than Boolean functions) are decomposed into seri
 \label{sec:resistive_memories}
 Resistive memories store information by modu-lating the resistance of nanoscale storage elements (memristors). Memristors are two-terminal devices, where the resistance of the device is changed by the electrical current or voltage. The resistance of the memristor is bounded by a minimum resistance $R_{on}$ (low resistive state, logic '1') and a $R_{off}$ maximum resistance (high resistive state, logic '0').
 
-Resistive memories are nonvolatile, free of leakage power, and emerge as long-term potential alternatives to charge-based memories, including NAND flash. The metal-oxide resistive random access memory (ReRAM), employing one resistive device and possibly also one transistor (1R1T) per bit-cell, is considered a potential technology to replace next-generation nonvolatile memories. Its main features are high reliability and fast access speed. A test-chip of 32GB device with two ReRAM-based memory layers and a CMOS logic layer underneath has been developed \cite{ahn2015pim}, demonstrating design techniques to achieve a high density functional chip. 
+Resistive memories are non-volatile, free of leakage power, and emerge as long-term potential alternatives to charge-based memories, including NAND flash. The metal-oxide resistive random access memory (ReRAM), employing one resistive device and possibly also one transistor (1R1T) per bit-cell, is considered a potential technology to replace next-generation nonvolatile memories. Its main features are high reliability and fast access speed. A test-chip of 32GB device with two ReRAM-based memory layers and a CMOS logic layer underneath has been developed \cite{ahn2015pim}, demonstrating design techniques to achieve a high density functional chip. 
 
 \subsection{Related Work}
 \label{sec:related_work}
@@ -170,27 +167,29 @@ S-W identifies the optimal alignment of two sequences by computing a two-dimensi
 	\label{fig:SWonReCAM}
 \end{figure}
 
-Figure \ref{fig:ReCAM_IC}a shows a snapshot of the scoring matrix during the algorithm execution. In a parallel implementation, the matrix is filled along the main diagonal and the entire anti-diagonal scores are calculated in parallel. Figure \ref{fig:ReCAM_IC}b shows the ReCAM memory map of two consecutive ICs at the beginning of an iteration. A and B contain the sequences, where each base-pair takes 2-bit and resides in a separate row. E and F are partial score results of the affine gap model \cite{giridhar2013exploring}. AD[0], AD[1] and AD[2] contain scoring matrix anti-diagonals. Scores are represented by 32-bit integers. Shift operations in the PRinS implementation move data between rows inside an IC and between daisy-chained ICs. Figure \ref{fig:SWonReCAM}c shows the ReCAM memory map at the end of an iteration and the mapping between ReCAM and the scoring matrix. A complete description of the S-W PRinS implementation appears in \cite{kaplan2017resistive}.
+Figure \ref{fig:SWonReCAM}a shows a snapshot of the scoring matrix during the algorithm execution. In a parallel implementation, the matrix is filled along the main diagonal and the entire anti-diagonal scores are calculated in parallel. Figure \ref{fig:SWonReCAM}b shows the ReCAM memory map of two consecutive ICs at the beginning of an iteration. A and B contain the sequences, where each base-pair takes 2-bit and resides in a separate row. E and F are partial score results of the affine gap model \cite{giridhar2013exploring}. AD[0], AD[1] and AD[2] contain scoring matrix anti-diagonals. Scores are represented by 32-bit integers. Shift operations in the PRinS implementation move data between rows inside an IC and between daisy-chained ICs. Figure \ref{fig:SWonReCAM}c shows the ReCAM memory map at the end of an iteration and the mapping between ReCAM and the scoring matrix. A complete description of the S-W PRinS implementation appears in \cite{kaplan2017resistive}.
 
 \subsection{simulation and comparison to state-of-the-art}
 \label{sec:SW_simulation}
-A cycle-accurate simulator of the ReCAM storage was constructed. Assumed operational frequency is 1GHz. An in-house power simulator was used to evaluate the power consumption of ReCAM. The latency and energy figures used by both the timing and power simulations are obtained using SPICE simulation and are detailed in [41]. 
-
-
-We simulate the ReCAM with the cycle-accurate simulator. Assumed ReCAM parameters are listed in Table <X>. The CUPS metric (Cell Updates per Second) is used to measure S-W performance. Results are compared to other works in Table 2. The in-storage implementation is compared to other implementations in different platforms: a 384-GPU cluster \cite{de2016cudalign}, the 128-FPGA RIVYERA platform ‎\cite{wienbrandt2014fpga} and a four Xeon Phi implementation \cite{liu2014swaphi}. On ReCAM with a total of 8GB in 32 separate ICs, each 256MB and 8M rows, 53 TCUPS are demonstrated, computing a total of $57\times10^{12}$ scores. $4.7\times$ faster than the best implementation. The table also shows computed GCUPS/Watt ratios; ReCAM is close to twice better than the FPGA solution and $80\times$ better than the GPU system.
 
 \tab{tab-mytable}{Simulated ReCAM parameters}{
 	\begin{tabular}{cc}
-	\hline
-	ReCAM Parameter$\quad $ & $\quad $Value \\
-	\hline
-	Active storage size$\quad $ & $\quad $8GB\\
-	Frequency$\quad $ & $\quad $1Ghz \\
-	Power per integrated circuit$\quad $ & $\quad $200W \\
-	Number of integrated circuit$\quad $ & $\quad $32 \\	
-	\hline
+		\hline
+		ReCAM Parameter$\quad $ & $\quad $Value \\
+		\hline
+		Active storage size$\quad $ & $\quad $8GB\\
+		Frequency$\quad $ & $\quad $1Ghz \\
+		Power per integrated circuit$\quad $ & $\quad $200W \\
+		Number of integrated circuit$\quad $ & $\quad $32 \\	
+		\hline
 	\end{tabular}
 }
+
+A cycle-accurate simulator of the ReCAM storage was constructed. Assumed operational frequency is 1GHz. An in-house power simulator was used to evaluate the power consumption of ReCAM. The latency and energy figures used by both the timing and power simulations are obtained using SPICE simulation and are detailed in \cite{yavits2015resistive}. 
+
+We simulate the ReCAM with the cycle-accurate simulator. Assumed ReCAM parameters are listed in Table <X>. The CUPS metric (Cell Updates per Second) is used to measure S-W performance. Results are compared to other works in Table 2. The in-storage implementation is compared to other implementations in different platforms: a 384-GPU cluster \cite{de2016cudalign}, the 128-FPGA RIVYERA platform \cite{wienbrandt2014fpga} and a four Xeon Phi implementation \cite{liu2014swaphi}. On ReCAM with a total of 8GB in 32 separate ICs, each 256MB and 8M rows, 53 TCUPS are demonstrated, computing a total of $57\times10^{12}$ scores. $4.7\times$ faster than the best implementation. The table also shows computed GCUPS/Watt ratios; ReCAM is close to twice better than the FPGA solution and $80\times$ better than the GPU system.
+
+
 
 \tab{tab-mytable}{Summary of state-of-the-art performance for S-W scoring step in previous works and in ReCAM}{
 	\begin{tabular}{ccccc}
@@ -244,7 +243,9 @@ In both cases (unique and duplicate), the LBA of the data block is placed togeth
 
 Read is done in two steps. First, the LBA of the data block is searched in the associative address translation table. The corresponding PA is retrieved from the table. Second, the PA is searched in the ReCAM storage (by compare), followed by read of the data block from the matched ReCAM rows. It is accomplished by a series of S read operations, starting with the row marked by '1' in the start\_block bit column. Overall, read operation takes $O(S)$ cycles.  
  
-Deletion of a data block is performed in three steps. In the first step, the LBA is searched in the address translation table; its PA is retrieved (to be used at the second step), and the entry at the address translation table is deleted (using the delete\_data function of Figure 17). In the second step, the PA (retrieved at the first step) is searched again in the address translation table; if MATCH returns '0', it means that the deleted block has no duplicates. In this case, it is deleted from the ReCAM storage, in $O(S)$ cycles.  
+Deletion of a data block is performed in three steps. In the first step, the LBA is searched in the address translation table; its PA is retrieved (to be used at the second step), and the entry at the address translation table is deleted (using the delete\_data function of Figure 17). In the second step, the PA (retrieved at the first step) is searched again in the address translation table; if MATCH returns '0', it means that the deleted block has no duplicates. In this case, it is deleted from the ReCAM storage, in $O(S)$ cycles.
+
+A complete description of the in-storage deduplication appears in \cite{kaplan2016deduplication}.  
 
 
 \begin{figure}[!ht]
@@ -313,7 +314,7 @@ We simulate the ReCAM based deduplication using the cycle-accurate CAM simulator
 
 We compare our ReCAM deduplication implementation with opendedup ‎\cite{silverberg2010opendedup}, which supports inline deduplication and runs on top of the local filesystem. It allows for either variable or fixed-size blocks and does not limit the amount of stored data. In our analysis, block sizes of 1KB, 2KB, 4KB and 8KB were used. In addition, we used opendedup on a server with four octa-core Intel Xeon E5-4650 CPUs with 64GB of RAM and 800GB Intel SSD DC P3700 drive.
 
-To evaluate the performance and energy consumption of opendedup,the file system benchmark IOzone was used \cite{norcott2003iozone}. IOzone allows writing data chunks with fixed number of duplicate parts, to control the degree of deduplication. All runs include writing of 50GB of data, with varying percentage of duplicate blocks. Each test was repeated with inline deduplication on and off, to isolate the CPU and DRAM energy consumptions during deduplication. Intel performance counter monitor ‎\cite{intelPCM} was used for measurements. 
+To evaluate the performance and energy consumption of opendedup,the file system benchmark IOzone was used \cite{norcott2003iozone}. IOzone allows writing data chunks with fixed number of duplicate parts, to control the degree of deduplication. All runs include writing of 50GB of data, with varying percentage of duplicate blocks. Each test was repeated with inline deduplication on and off, to isolate the CPU and DRAM energy consumptions during deduplication. Intel performance counter monitor \cite{intelPCM} was used for measurements. 
 
 As demonstrated by ‎\cite{zhu2008avoiding}, real-world workloads have high variability in the percentage of duplicate data. Our goal is to exhaustively examine ReCAM performance and energy consumption. Therefore we use a suite of artificial workloads with a varying degree of duplication ratio. It allows us to control both the workload and the mainline system parameters. Both opendedup and ReCAM deduplicate all duplicate blocks.
 
@@ -336,9 +337,12 @@ The measured energy consumption of opendedup (including the SSD energy consumpti
 \end{figure}
 
 
+
+
 \section{Conclusions}
 
-This paper introduces ReCAM, a Processing-in-Storage architecture. It combines storage with parallel processing of data within the storage. Each ReCAM integrated circuit may contain hundreds of millions of data rows, each row serving as an associative processing unit. Many ReCAM integrated circuits chained together constitute a large storage device, suitable for big data applications. ReCAM applies parallel associative processing to the data. This paper presents Smith-Waterman DNA sequence alignment and in-storage data deduplication on ReCAM and shows significant speedup over alternative non-in-storage implementations. 
+Near-data processing-in-storage is inherently limited because it is based on replicating von Neumann processors near storage. Therefore, it potentially faces some of von Neumann architecture problems, such as the bandwidth wall. To resolve this problem and allow for full utilization of ultra-high internal bandwidth of future resistive memory based SSD, we propose a novel in-data processing-in-storage architecture based on Resistive Content Addressable Memory (ReCAM). Unlike near-data in-SSD processing, ReCAM enables storage with in-data associative processing capabilities. It can contain hundreds of millions of data rows, each row serving as an associative processing unit. ReCAM requires no in-storage processing cores external to the storage arrays. There is no data transfer outside the storage arrays. Therefore, the internal bandwidth of the resistive memory based storage can be utilized to its fullest extent, considerably improving computation throughput of processing-in-storage system.
+The ReCAM architecture, capable of general purpose associative processing, has been applied to a variety of challenging data and compute intensive problems, such as various machine learning and bioinformatics algorithms. The paper investigated SpMV, K-Means, KNN and Smith-Waterman sequence alignment algorithms and compared RCAM to other published analyses. 
 
 
 \bibliography{example}
