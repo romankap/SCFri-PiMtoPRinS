@@ -14,6 +14,10 @@ Ahn, J., Yoo, S., Mutlu, O., Choi, K.: Pim-enabled instructions: A
   Architecture (ISCA), 2015 ACM/IEEE 42nd Annual International Symposium on.
   pp. 336--348. IEEE (2015)
 
+\bibitem{akin2016hamlet}
+Akin, B., Franchetti, F., Hoe, J.C.: Hamlet architecture for parallel data
+  reorganization in memory. IEEE Micro  36(1),  14--23 (2016)
+
 \bibitem{akinaga2010resistive}
 Akinaga, H., Shima, H.: Resistive random access memory (reram) based on metal
   oxides. Proceedings of the IEEE  98(12),  2237--2251 (2010)
@@ -24,19 +28,46 @@ Azarkhish, E., Pfister, C., Rossi, D., Loi, I., Benini, L.: Logic-base
   Transactions on Very Large Scale Integration (VLSI) Systems  25(1),  210--223
   (2017)
 
+\bibitem{bae2013intelligent}
+Bae, D.H., Kim, J.H., Kim, S.W., Oh, H., Park, C.: Intelligent ssd: a turbo for
+  big data mining. In: Proceedings of the 22nd ACM international conference on
+  Conference on information \& knowledge management. pp. 1573--1576. ACM (2013)
+
 \bibitem{balasubramonian2014near}
 Balasubramonian, R., Chang, J., Manning, T., Moreno, J.H., Murphy, R., Nair,
   R., Swanson, S.: Near-data processing: Insights from a micro-46 workshop.
   IEEE Micro  34(4),  36--42 (2014)
+
+\bibitem{boboila2012active}
+Boboila, S., Kim, Y., Vazhkudai, S.S., Desnoyers, P., Shipman, G.M.: Active
+  flash: Out-of-core data analytics on flash storage. In: Mass Storage Systems
+  and Technologies (MSST), 2012 IEEE 28th Symposium on. pp. 1--12. IEEE (2012)
 
 \bibitem{chen2011caftl}
 Chen, F., Luo, T., Zhang, X.: Caftl: A content-aware flash translation layer
   enhancing the lifespan of flash memory based solid state drives. In: FAST.
   vol.~11, pp. 77--90 (2011)
 
+\bibitem{cho2013xsd}
+Cho, B.Y., Jeong, W.S., Oh, D., Ro, W.W.: Xsd: Accelerating mapreduce by
+  harnessing the gpu inside an ssd. In: Proceedings of the 1st Workshop on
+  Near-Data Processing (2013)
+
+\bibitem{cho2013active}
+Cho, S., Park, C., Oh, H., Kim, S., Yi, Y., Ganger, G.R.: Active disk meets
+  flash: A case for intelligent ssds. In: Proceedings of the 27th international
+  ACM conference on International conference on supercomputing. pp. 91--102.
+  ACM (2013)
+
 \bibitem{intelPCM}
 Corporation, I.: Intel performance counter moniter.
   \url{www.intel.com/software/pcm}
+
+\bibitem{de2013minerva}
+De, A., Gokhale, M., Gupta, R., Swanson, S.: Minerva: Accelerating data
+  analysis in next-generation ssds. In: Field-Programmable Custom Computing
+  Machines (FCCM), 2013 IEEE 21st Annual International Symposium on. pp. 9--16.
+  IEEE (2013)
 
 \bibitem{debnath2010chunkstash}
 Debnath, B.K., Sengupta, S., Li, J.: Chunkstash: Speeding up inline storage
@@ -48,9 +79,25 @@ Esmaeilzadeh, H., Blem, E., St~Amant, R., Sankaralingam, K., Burger, D.: Dark
   silicon and the end of multicore scaling. In: ACM SIGARCH Computer
   Architecture News. vol.~39, pp. 365--376. ACM (2011)
 
+\bibitem{farmahini2015nda}
+Farmahini-Farahani, A., Ahn, J.H., Morrow, K., Kim, N.S.: Nda: Near-dram
+  acceleration architecture leveraging commodity dram devices and standard
+  memory modules. In: High Performance Computer Architecture (HPCA), 2015 IEEE
+  21st International Symposium on. pp. 283--295. IEEE (2015)
+
 \bibitem{foster1976content}
 Foster, C.C.: Content addressable parallel processors. John Wiley \& Sons, Inc.
   (1976)
+
+\bibitem{gao2015practical}
+Gao, M., Ayers, G., Kozyrakis, C.: Practical near-data processing for in-memory
+  analytics frameworks. In: Parallel Architecture and Compilation (PACT), 2015
+  International Conference on. pp. 113--124. IEEE (2015)
+
+\bibitem{gao2016hrl}
+Gao, M., Kozyrakis, C.: Hrl: efficient and flexible reconfigurable logic for
+  near-data processing. In: High Performance Computer Architecture (HPCA), 2016
+  IEEE International Symposium on. pp. 126--137. Ieee (2016)
 
 \bibitem{giridhar2013exploring}
 Giridhar, B., Cieslak, M., Duggal, D., Dreslinski, R., Chen, H.M., Patti, R.,
@@ -58,6 +105,10 @@ Giridhar, B., Cieslak, M., Duggal, D., Dreslinski, R., Chen, H.M., Patti, R.,
   organizations for energy-efficient and resilient exascale memories. In:
   Proceedings of the International Conference on High Performance Computing,
   Networking, Storage and Analysis. p.~23. ACM (2013)
+
+\bibitem{gokhale1995processing}
+Gokhale, M., Holmes, B., Iobst, K.: Processing in memory: The terasys massively
+  parallel pim array. Computer  28(4),  23--31 (1995)
 
 \bibitem{guo2011resistive}
 Guo, Q., Guo, X., Bai, Y., Ipek, E.: A resistive tcam accelerator for
@@ -68,6 +119,30 @@ Guo, Q., Guo, X., Bai, Y., Ipek, E.: A resistive tcam accelerator for
 Guo, Q., Guo, X., Patel, R., Ipek, E., Friedman, E.G.: Ac-dimm: associative
   computing with stt-mram. ACM SIGARCH Computer Architecture News  41(3),
   189--200 (2013)
+
+\bibitem{hall1999mapping}
+Hall, M., Kogge, P., Koller, J., Diniz, P., Chame, J., Draper, J., LaCoss, J.,
+  Granacki, J., Brockman, J., Srivastava, A., et~al.: Mapping irregular
+  applications to diva, a pim-based data-intensive architecture. In:
+  Proceedings of the 1999 ACM/IEEE conference on Supercomputing. p.~57. ACM
+  (1999)
+
+\bibitem{jo2016collaborative}
+Jo, Y.Y., Cho, S., Kim, S.W., Oh, H.: Collaborative processing of
+  data-intensive algorithms with cpu, intelligent ssd, and gpu. In: Proceedings
+  of the 31st Annual ACM Symposium on Applied Computing. pp. 1865--1870. ACM
+  (2016)
+
+\bibitem{jun2015bluedbm}
+Jun, S.W., Liu, M., Lee, S., Hicks, J., Ankcorn, J., King, M., Xu, S., et~al.:
+  Bluedbm: An appliance for big data analytics. In: Computer Architecture
+  (ISCA), 2015 ACM/IEEE 42nd Annual International Symposium on. pp. 1--13. IEEE
+  (2015)
+
+\bibitem{kang2013enabling}
+Kang, Y., Kee, Y.s., Miller, E.L., Park, C.: Enabling cost-effective data
+  processing with smart ssd. In: Mass Storage Systems and Technologies (MSST),
+  2013 IEEE 29th Symposium on. pp. 1--12. IEEE (2013)
 
 \bibitem{kaplan2017resistive}
 Kaplan, R., Yavits, L., Ginosar, R., Weiser, U.: A resistive cam
@@ -80,11 +155,23 @@ Kaplan, R., Yavits, L., Morad, A., Ginosar, R.: Deduplication in resistive
   Modeling, Optimization and Simulation (PATMOS), 2016 26th International
   Workshop on. pp. 100--106. IEEE (2016)
 
+\bibitem{kogge2000pim}
+Kogge, P.M., Brockman, J., Freeh, V.W.: Pim architectures to support petaflops
+  level computation in the htmt machine. In: Innovative Architecture for Future
+  Generation High-Performance Processors and Systems, 1999. International
+  Workshop. pp. 35--44. IEEE (2000)
+
 \bibitem{liu2014swaphi}
 Liu, Y., Schmidt, B.: Swaphi: Smith-waterman protein database search on xeon
   phi coprocessors. In: Application-specific Systems, Architectures and
   Processors (ASAP), 2014 IEEE 25th International Conference On. pp. 184--185.
   IEEE (2014)
+
+\bibitem{nair2015active}
+Nair, R., Antao, S.F., Bertolli, C., Bose, P., Brunheroto, J.R., Chen, T.,
+  Cher, C.Y., Costa, C.H., Doi, J., Evangelinos, C., et~al.: Active memory
+  cube: A processing-in-memory architecture for exascale systems. IBM Journal
+  of Research and Development  59(2/3),  17--1 (2015)
 
 \bibitem{norcott2003iozone}
 Norcott, W.D., Capps, D.: Iozone filesystem benchmark (2003)
@@ -95,9 +182,21 @@ de~Oliveira~Sandes, E.F., Miranda, G., Martorell, X., Ayguade, E., Teodoro, G.,
   chromosome-wide alignment in gpu clusters. IEEE Transactions on Parallel and
   Distributed Systems  27(10),  2838--2850 (2016)
 
+\bibitem{paul2012scalable}
+Paul, S., Bhunia, S.: A scalable memory-based reconfigurable computing
+  framework for nanoscale crossbar. IEEE transactions on Nanotechnology  11(3),
+   451--462 (2012)
+
 \bibitem{potter1989array}
 Potter, J., Meilander, W.: Array processor supercomputers. Proceedings of the
   IEEE  77(12),  1896--1914 (1989)
+
+\bibitem{shafiee2016isaac}
+Shafiee, A., Nag, A., Muralimanohar, N., Balasubramonian, R., Strachan, J.P.,
+  Hu, M., Williams, R.S., Srikumar, V.: Isaac: A convolutional neural network
+  accelerator with in-situ analog arithmetic in crossbars. In: Proceedings of
+  the 43rd International Symposium on Computer Architecture. pp. 14--26. IEEE
+  Press (2016)
 
 \bibitem{silverberg2010opendedup}
 Silverberg, S.: “opendedup sdfs (2010)
@@ -105,6 +204,21 @@ Silverberg, S.: “opendedup sdfs (2010)
 \bibitem{smith1981identification}
 Smith, T.F., Waterman, M.S.: Identification of common molecular subsequences.
   Journal of molecular biology  147(1),  195--197 (1981)
+
+\bibitem{suh2001pim}
+Suh, J., Li, C., Crago, S.P., Parker, R.: A pim-based multiprocessor system.
+  In: Parallel and Distributed Processing Symposium., Proceedings 15th
+  International. pp. 6--pp. IEEE (2001)
+
+\bibitem{sura2015data}
+Sura, Z., Jacob, A., Chen, T., Rosenburg, B., Sallenave, O., Bertolli, C.,
+  Antao, S., Brunheroto, J., Park, Y., O'Brien, K., et~al.: Data access
+  optimization in a processing-in-memory system. In: Proceedings of the 12th
+  ACM International Conference on Computing Frontiers. p.~6. ACM (2015)
+
+\bibitem{thottethodi2016rowcore}
+Thottethodi, M., Vijaykumar, T., et~al.: Rowcore: A processing-near-memory
+  architecture for big data machine learning  (2016)
 
 \bibitem{wienbrandt2014fpga}
 Wienbrandt, L.: The fpga-based high-performance computer rivyera for
@@ -124,6 +238,12 @@ Yavits, L., Kvatinsky, S., Morad, A., Ginosar, R.: Resistive associative
 Yavits, L., Morad, A., Ginosar, R.: Computer architecture with associative
   processor replacing last-level cache and simd accelerator. IEEE Transactions
   on Computers  64(2),  368--381 (2015)
+
+\bibitem{zhang2014top}
+Zhang, D., Jayasena, N., Lyashevsky, A., Greathouse, J.L., Xu, L., Ignatowski,
+  M.: Top-pim: throughput-oriented programmable processing in memory. In:
+  Proceedings of the 23rd international symposium on High-performance parallel
+  and distributed computing. pp. 85--98. ACM (2014)
 
 \bibitem{zhu2008avoiding}
 Zhu, B., Li, K., Patterson, R.H.: Avoiding the disk bottleneck in the data

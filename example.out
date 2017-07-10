@@ -3,17 +3,16 @@
 \BOOKMARK [2][-]{subsection.2.1}{Content Addressable Memory and Associative Processing}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{Resistive Memories}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{Related Work}{section.2}% 5
-\BOOKMARK [3][-]{subsubsection.2.3.1}{2D Processing-in-Memory Architectures}{subsection.2.3}% 6
-\BOOKMARK [3][-]{subsubsection.2.3.2}{3D Processing-in-Memory Architectures}{subsection.2.3}% 7
-\BOOKMARK [3][-]{subsubsection.2.3.3}{Processing-in-Memory with Memristors}{subsection.2.3}% 8
-\BOOKMARK [3][-]{subsubsection.2.3.4}{Near-Data Processing-in-Storage}{subsection.2.3}% 9
-\BOOKMARK [1][-]{section.3}{Processing-in-Storage with ReCAM}{}% 10
-\BOOKMARK [2][-]{subsection.3.1}{ReCAM Crossbar Array}{section.3}% 11
-\BOOKMARK [2][-]{subsection.3.2}{System Architecture}{section.3}% 12
-\BOOKMARK [1][-]{section.4}{PRinS Application: Smith-Waterman DNA Sequence Alignment}{}% 13
-\BOOKMARK [2][-]{subsection.4.1}{simulation and comparison to state-of-the-art}{section.4}% 14
-\BOOKMARK [1][-]{section.5}{PRinS Application: In-Storage Data Deduplication}{}% 15
-\BOOKMARK [2][-]{subsection.5.1}{Related Work: Conventional Deduplication}{section.5}% 16
-\BOOKMARK [2][-]{subsection.5.2}{In-Storage ReCAM Based Deduplication}{section.5}% 17
-\BOOKMARK [2][-]{subsection.5.3}{In-Storage Deduplication Evaluations}{section.5}% 18
-\BOOKMARK [1][-]{section.6}{Conclusions}{}% 19
+\BOOKMARK [3][-]{subsubsection.2.3.1}{3D Processing-in-Memory Architectures}{subsection.2.3}% 6
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Processing-in-Memory with Resistive Materials}{subsection.2.3}% 7
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Near-Data Processing-in-Storage}{subsection.2.3}% 8
+\BOOKMARK [1][-]{section.3}{Processing-in-Storage with ReCAM}{}% 9
+\BOOKMARK [2][-]{subsection.3.1}{ReCAM Crossbar Array}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.2}{System Architecture}{section.3}% 11
+\BOOKMARK [1][-]{section.4}{PRinS Application: Smith-Waterman DNA Sequence Alignment}{}% 12
+\BOOKMARK [2][-]{subsection.4.1}{simulation and comparison to state-of-the-art}{section.4}% 13
+\BOOKMARK [1][-]{section.5}{PRinS Application: In-Storage Data Deduplication}{}% 14
+\BOOKMARK [2][-]{subsection.5.1}{Related Work: Conventional Deduplication}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.2}{In-Storage ReCAM Based Deduplication}{section.5}% 16
+\BOOKMARK [2][-]{subsection.5.3}{In-Storage Deduplication Evaluations}{section.5}% 17
+\BOOKMARK [1][-]{section.6}{Conclusions}{}% 18
