@@ -48,6 +48,13 @@ Chen, F., Luo, T., Zhang, X.: Caftl: A content-aware flash translation layer
   enhancing the lifespan of flash memory based solid state drives. In: FAST.
   vol.~11, pp. 77--90 (2011)
 
+\bibitem{chi2016prime}
+Chi, P., Li, S., Xu, C., Zhang, T., Zhao, J., Liu, Y., Wang, Y., Xie, Y.:
+  Prime: A novel processing-in-memory architecture for neural network
+  computation in reram-based main memory. In: Proceedings of the 43rd
+  International Symposium on Computer Architecture. pp. 27--39. IEEE Press
+  (2016)
+
 \bibitem{cho2013xsd}
 Cho, B.Y., Jeong, W.S., Oh, D., Ro, W.W.: Xsd: Accelerating mapreduce by
   harnessing the gpu inside an ssd. In: Proceedings of the 1st Workshop on
@@ -99,21 +106,13 @@ Gao, M., Kozyrakis, C.: Hrl: efficient and flexible reconfigurable logic for
   near-data processing. In: High Performance Computer Architecture (HPCA), 2016
   IEEE International Symposium on. pp. 126--137. Ieee (2016)
 
-\bibitem{giridhar2013exploring}
-Giridhar, B., Cieslak, M., Duggal, D., Dreslinski, R., Chen, H.M., Patti, R.,
-  Hold, B., Chakrabarti, C., Mudge, T., Blaauw, D.: Exploring dram
-  organizations for energy-efficient and resilient exascale memories. In:
-  Proceedings of the International Conference on High Performance Computing,
-  Networking, Storage and Analysis. p.~23. ACM (2013)
-
 \bibitem{gokhale1995processing}
 Gokhale, M., Holmes, B., Iobst, K.: Processing in memory: The terasys massively
   parallel pim array. Computer  28(4),  23--31 (1995)
 
-\bibitem{guo2011resistive}
-Guo, Q., Guo, X., Bai, Y., Ipek, E.: A resistive tcam accelerator for
-  data-intensive computing. In: Proceedings of the 44th Annual IEEE/ACM
-  International Symposium on Microarchitecture. pp. 339--350. ACM (2011)
+\bibitem{gotoh1982improved}
+Gotoh, O.: An improved algorithm for matching biological sequences. Journal of
+  molecular biology  162(3),  705--708 (1982)
 
 \bibitem{guo2013ac}
 Guo, Q., Guo, X., Patel, R., Ipek, E., Friedman, E.G.: Ac-dimm: associative
@@ -161,6 +160,18 @@ Kogge, P.M., Brockman, J., Freeh, V.W.: Pim architectures to support petaflops
   Generation High-Performance Processors and Systems, 1999. International
   Workshop. pp. 35--44. IEEE (2000)
 
+\bibitem{lipovski1999dynamic}
+Lipovski, G.J., Yu, C.: The dynamic associative access memory chip and its
+  application to simd processing and full-text database retrieval. In: Memory
+  Technology, Design and Testing, 1999. Records of the 1999 IEEE International
+  Workshop on. pp. 24--31. IEEE (1999)
+
+\bibitem{liu2014130}
+Liu, T.y., Yan, T.H., Scheuerlein, R., Chen, Y., Lee, J.K., Balakrishnan, G.,
+  Yee, G., Zhang, H., Yap, A., Ouyang, J., et~al.: A 130.7-mm2 2-layer 32-gb
+  reram memory device in 24-nm technology. IEEE Journal of Solid-State Circuits
+   49(1),  140--153 (2014)
+
 \bibitem{liu2014swaphi}
 Liu, Y., Schmidt, B.: Swaphi: Smith-waterman protein database search on xeon
   phi coprocessors. In: Application-specific Systems, Architectures and
@@ -172,6 +183,10 @@ Nair, R., Antao, S.F., Bertolli, C., Bose, P., Brunheroto, J.R., Chen, T.,
   Cher, C.Y., Costa, C.H., Doi, J., Evangelinos, C., et~al.: Active memory
   cube: A processing-in-memory architecture for exascale systems. IBM Journal
   of Research and Development  59(2/3),  17--1 (2015)
+
+\bibitem{thottethodi2016rowcore}
+Nitin, Thottethodi, M., Vijaykumar, T., et~al.: Rowcore: A
+  processing-near-memory architecture for big data machine learning  (2016)
 
 \bibitem{norcott2003iozone}
 Norcott, W.D., Capps, D.: Iozone filesystem benchmark (2003)
@@ -199,7 +214,7 @@ Shafiee, A., Nag, A., Muralimanohar, N., Balasubramonian, R., Strachan, J.P.,
   Press (2016)
 
 \bibitem{silverberg2010opendedup}
-Silverberg, S.: “opendedup sdfs (2010)
+Silverberg, S.: Opendedup sdfs (2010)
 
 \bibitem{smith1981identification}
 Smith, T.F., Waterman, M.S.: Identification of common molecular subsequences.
@@ -215,10 +230,6 @@ Sura, Z., Jacob, A., Chen, T., Rosenburg, B., Sallenave, O., Bertolli, C.,
   Antao, S., Brunheroto, J., Park, Y., O'Brien, K., et~al.: Data access
   optimization in a processing-in-memory system. In: Proceedings of the 12th
   ACM International Conference on Computing Frontiers. p.~6. ACM (2015)
-
-\bibitem{thottethodi2016rowcore}
-Thottethodi, M., Vijaykumar, T., et~al.: Rowcore: A processing-near-memory
-  architecture for big data machine learning  (2016)
 
 \bibitem{wienbrandt2014fpga}
 Wienbrandt, L.: The fpga-based high-performance computer rivyera for

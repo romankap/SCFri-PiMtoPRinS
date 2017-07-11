@@ -20,10 +20,6 @@
 \bibstyle{superfri}
 \citation{esmaeilzadeh2011dark}
 \citation{balasubramonian2014near}
-\citation{yavits2015computer}
-\citation{guo2011resistive}
-\citation{ahn2015scalable}
-\citation{de2016cudalign}
 \select@language{english}
 \@writefile{toc}{\select@language{english}}
 \@writefile{lof}{\select@language{english}}
@@ -35,18 +31,19 @@
 \citation{yavits2015resistive}
 \citation{foster1976content}
 \citation{yavits2015resistive}
+\citation{liu2014130}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Background and Related Work}{2}{section.2}}
-\newlabel{sec:backgroud}{{2}{2}{Background and Related Work}{section.2}{}}
+\newlabel{sec:background}{{2}{2}{Background and Related Work}{section.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Content Addressable Memory and Associative Processing}{2}{subsection.2.1}}
 \newlabel{sec:CAMandAP}{{2.1}{2}{Content Addressable Memory and Associative Processing}{subsection.2.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Resistive Memories}{2}{subsection.2.2}}
 \newlabel{sec:resistive_memories}{{2.2}{2}{Resistive Memories}{subsection.2.2}{}}
-\citation{ahn2015pim}
 \citation{potter1989array}
 \citation{gokhale1995processing}
 \citation{hall1999mapping}
 \citation{kogge2000pim}
 \citation{suh2001pim}
+\citation{lipovski1999dynamic}
 \citation{yavits2015computer}
 \citation{thottethodi2016rowcore}
 \citation{gao2016hrl}
@@ -64,7 +61,7 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}3D Processing-in-Memory Architectures}{3}{subsubsection.2.3.1}}
 \newlabel{sec:3D_PiM}{{2.3.1}{3}{3D Processing-in-Memory Architectures}{subsubsection.2.3.1}{}}
 \citation{paul2012scalable}
-\citation{paul2012scalable}
+\citation{chi2016prime}
 \citation{yavits2015resistive}
 \citation{shafiee2016isaac}
 \citation{boboila2012active}
@@ -83,7 +80,6 @@
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:in_vs_near_data}{{1}{4}{Comparison of (a) \textbf {near-data} processing-in-storage (b) and \textbf {in-data} processing-in-storage based on ReCAM.\relax }{figure.caption.2}{}}
 \citation{akinaga2010resistive}
-\citation{azarkhish2017logic}
 \citation{yavits2015resistive}
 \citation{balasubramonian2014near}
 \citation{balasubramonian2014near}
@@ -99,13 +95,15 @@
 \newlabel{fig:ReCAM_IC}{{2}{6}{Single ReCAM crossbar integrated circuit. (a) 2T2R ReCAM bitcell. (b) TAG logic.\relax }{figure.caption.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}System Architecture}{6}{subsection.3.2}}
 \newlabel{sec:system_architecture}{{3.2}{6}{System Architecture}{subsection.3.2}{}}
-\citation{giridhar2013exploring}
+\@writefile{toc}{\contentsline {section}{\numberline {4}PRinS Application: Smith-Waterman DNA Sequence Alignment}{6}{section.4}}
+\newlabel{sec:smith_waterman}{{4}{6}{PRinS Application: Smith-Waterman DNA Sequence Alignment}{section.4}{}}
+\citation{gotoh1982improved}
 \citation{kaplan2017resistive}
-\citation{yavits2015resistive}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Complete ReCAM-based Storage system, composed of (a) separate multiple daisy-chained ICs and (b) Microcontroller. Connected to the multiple ICs with a reduction tree network.\relax }}{7}{figure.caption.5}}
 \newlabel{fig:ReCAM_system}{{3}{7}{Complete ReCAM-based Storage system, composed of (a) separate multiple daisy-chained ICs and (b) Microcontroller. Connected to the multiple ICs with a reduction tree network.\relax }{figure.caption.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}PRinS Application: Smith-Waterman DNA Sequence Alignment}{7}{section.4}}
-\newlabel{sec:smith_waterman}{{4}{7}{PRinS Application: Smith-Waterman DNA Sequence Alignment}{section.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Mapping the dynamic programming matrix on ReCAM. (a) A snapshot of the dynamic programming matrix, shows the direction of progress for the parallel algorithm. (b) and (c) shows an example of organization of data in the ReCAM crossbar array at the beginning (b) and end (c) of an iteration. AD[2] contents in (b) is being replaced with the new result (c). Bottom rows in a crossbar IC are daisy-chained to the next IC in a shift instruction. The cell marked with X contains the global maxmium score.\relax }}{7}{figure.caption.6}}
+\newlabel{fig:SWonReCAM}{{4}{7}{Mapping the dynamic programming matrix on ReCAM. (a) A snapshot of the dynamic programming matrix, shows the direction of progress for the parallel algorithm. (b) and (c) shows an example of organization of data in the ReCAM crossbar array at the beginning (b) and end (c) of an iteration. AD[2] contents in (b) is being replaced with the new result (c). Bottom rows in a crossbar IC are daisy-chained to the next IC in a shift instruction. The cell marked with X contains the global maxmium score.\relax }{figure.caption.6}{}}
+\citation{yavits2015resistive}
 \citation{de2016cudalign}
 \citation{wienbrandt2014fpga}
 \citation{liu2014swaphi}
@@ -113,47 +111,47 @@
 \citation{wienbrandt2014fpga}
 \citation{de2016cudalign}
 \citation{zhu2008avoiding}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Mapping the dynamic programming matrix on ReCAM. (a) A snapshot of the dynamic programming matrix, shows the direction of progress for the parallel algorithm. (b) and (c) shows an example of organization of data in the ReCAM crossbar array at the beginning (b) and end (c) of an iteration. AD[2] contents in (b) is being replaced with the new result (c). Bottom rows in a crossbar IC are daisy-chained to the next IC in a shift instruction. The cell marked with X contains the global maxmium score.\relax }}{8}{figure.caption.6}}
-\newlabel{fig:SWonReCAM}{{4}{8}{Mapping the dynamic programming matrix on ReCAM. (a) A snapshot of the dynamic programming matrix, shows the direction of progress for the parallel algorithm. (b) and (c) shows an example of organization of data in the ReCAM crossbar array at the beginning (b) and end (c) of an iteration. AD[2] contents in (b) is being replaced with the new result (c). Bottom rows in a crossbar IC are daisy-chained to the next IC in a shift instruction. The cell marked with X contains the global maxmium score.\relax }{figure.caption.6}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Simulated ReCAM parameters\relax }}{8}{table.caption.7}}
-\newlabel{tab-mytable}{{2}{8}{Simulated ReCAM parameters\relax }{table.caption.7}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}simulation and comparison to state-of-the-art}{8}{subsection.4.1}}
 \newlabel{sec:SW_simulation}{{4.1}{8}{simulation and comparison to state-of-the-art}{subsection.4.1}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Summary of state-of-the-art performance for S-W scoring step in previous works and in ReCAM\relax }}{9}{table.caption.8}}
-\newlabel{tab-mytable}{{3}{9}{Summary of state-of-the-art performance for S-W scoring step in previous works and in ReCAM\relax }{table.caption.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}PRinS Application: In-Storage Data Deduplication}{9}{section.5}}
-\newlabel{sec:dedup}{{5}{9}{PRinS Application: In-Storage Data Deduplication}{section.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Related Work: Conventional Deduplication}{9}{subsection.5.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Conventional deduplication scheme after writing the following sequence of (data block, LBA): (A, x), (A, y), (B, y+1), (C, y+2). The storage, chunk index and address translation table reside in the physical layer.\relax }}{9}{figure.caption.9}}
-\newlabel{fig:dedup_PC}{{5}{9}{Conventional deduplication scheme after writing the following sequence of (data block, LBA): (A, x), (A, y), (B, y+1), (C, y+2). The storage, chunk index and address translation table reside in the physical layer.\relax }{figure.caption.9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Simulated ReCAM parameters\relax }}{8}{table.caption.7}}
+\newlabel{tab:recam_simulation}{{2}{8}{Simulated ReCAM parameters\relax }{table.caption.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Summary of state-of-the-art performance for S-W scoring step in previous works and in ReCAM\relax }}{8}{table.caption.8}}
+\newlabel{tab:SW_results}{{3}{8}{Summary of state-of-the-art performance for S-W scoring step in previous works and in ReCAM\relax }{table.caption.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}PRinS Application: In-Storage Data Deduplication}{8}{section.5}}
+\newlabel{sec:dedup}{{5}{8}{PRinS Application: In-Storage Data Deduplication}{section.5}{}}
 \citation{zhu2008avoiding}
 \citation{debnath2010chunkstash}
 \citation{zhu2008avoiding}
 \citation{XbrickSpec}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Related Work: Conventional Deduplication}{9}{subsection.5.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Conventional deduplication scheme after writing the following sequence of (data block, LBA): (A, x), (A, y), (B, y+1), (C, y+2). The storage, chunk index and address translation table reside in the physical layer.\relax }}{9}{figure.caption.9}}
+\newlabel{fig:dedup_PC}{{5}{9}{Conventional deduplication scheme after writing the following sequence of (data block, LBA): (A, x), (A, y), (B, y+1), (C, y+2). The storage, chunk index and address translation table reside in the physical layer.\relax }{figure.caption.9}{}}
 \citation{chen2011caftl}
 \citation{debnath2010chunkstash}
 \citation{zhu2008avoiding}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}In-Storage ReCAM Based Deduplication}{10}{subsection.5.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}In-Storage ReCAM-Based Deduplication}{10}{subsection.5.2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces ReCAM based deduplication scheme, following the same sequence of writes as in Figure \ref  {fig:dedup_PC}.\relax }}{10}{figure.caption.10}}
 \newlabel{fig:dedup_ReCAM}{{6}{10}{ReCAM based deduplication scheme, following the same sequence of writes as in Figure \ref {fig:dedup_PC}.\relax }{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}ReCAM-Based Deduplication Algorithm}{10}{subsubsection.5.2.1}}
 \citation{kaplan2016deduplication}
 \citation{yavits2015resistive}
 \citation{silverberg2010opendedup}
 \citation{norcott2003iozone}
 \citation{intelPCM}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}In-Storage Deduplication Evaluations}{11}{subsection.5.3}}
 \citation{zhu2008avoiding}
 \citation{XbrickSpec}
-\zref@newlabel{mdf@pagelabel-1}{\default{\caption@xref {??}{ on input line 303}}\page{12}\abspage{12}\mdf@pagevalue{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}In-Storage Deduplication Evaluations}{11}{subsection.5.3}}
+\zref@newlabel{mdf@pagelabel-1}{\default{\caption@xref {??}{ on input line 305}}\page{12}\abspage{12}\mdf@pagevalue{12}}
 \pgfsyspdfmark {pgfid1}{4661699}{14643179}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Associative Write, Read and Delete in ReCAM-based data deduplication.\relax }}{12}{figure.caption.11}}
 \newlabel{fig:dedup_alg}{{7}{12}{Associative Write, Read and Delete in ReCAM-based data deduplication.\relax }{figure.caption.11}{}}
+\bibdata{example}
+\bibcite{ahn2015scalable}{1}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Write performance for different block sizes vs. percentage of deduplicated blocks, for data blocks of 1KB, 2KB, 4KB and 8KB (OPNDDP = Opendedup).\relax }}{13}{figure.caption.12}}
 \newlabel{fig:dedup_performance}{{8}{13}{Write performance for different block sizes vs. percentage of deduplicated blocks, for data blocks of 1KB, 2KB, 4KB and 8KB (OPNDDP = Opendedup).\relax }{figure.caption.12}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Deduplication energy for different block sizes vs. percentage of deduplicated blocks, for data blocks of 1KB, 2KB, 4KB and 8KB while writing 50GByte of data.\relax }}{13}{figure.caption.13}}
 \newlabel{fig:dedup_energy}{{9}{13}{Deduplication energy for different block sizes vs. percentage of deduplicated blocks, for data blocks of 1KB, 2KB, 4KB and 8KB while writing 50GByte of data.\relax }{figure.caption.13}{}}
-\bibdata{example}
-\bibcite{ahn2015scalable}{1}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusions}{13}{section.6}}
 \bibcite{ahn2015pim}{2}
 \bibcite{akin2016hamlet}{3}
 \bibcite{akinaga2010resistive}{4}
@@ -162,20 +160,19 @@
 \bibcite{balasubramonian2014near}{7}
 \bibcite{boboila2012active}{8}
 \bibcite{chen2011caftl}{9}
-\bibcite{cho2013xsd}{10}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusions}{14}{section.6}}
-\bibcite{cho2013active}{11}
-\bibcite{intelPCM}{12}
-\bibcite{de2013minerva}{13}
-\bibcite{debnath2010chunkstash}{14}
-\bibcite{esmaeilzadeh2011dark}{15}
-\bibcite{farmahini2015nda}{16}
-\bibcite{foster1976content}{17}
-\bibcite{gao2015practical}{18}
-\bibcite{gao2016hrl}{19}
-\bibcite{giridhar2013exploring}{20}
+\bibcite{chi2016prime}{10}
+\bibcite{cho2013xsd}{11}
+\bibcite{cho2013active}{12}
+\bibcite{intelPCM}{13}
+\bibcite{de2013minerva}{14}
+\bibcite{debnath2010chunkstash}{15}
+\bibcite{esmaeilzadeh2011dark}{16}
+\bibcite{farmahini2015nda}{17}
+\bibcite{foster1976content}{18}
+\bibcite{gao2015practical}{19}
+\bibcite{gao2016hrl}{20}
 \bibcite{gokhale1995processing}{21}
-\bibcite{guo2011resistive}{22}
+\bibcite{gotoh1982improved}{22}
 \bibcite{guo2013ac}{23}
 \bibcite{hall1999mapping}{24}
 \bibcite{jo2016collaborative}{25}
@@ -184,23 +181,25 @@
 \bibcite{kaplan2017resistive}{28}
 \bibcite{kaplan2016deduplication}{29}
 \bibcite{kogge2000pim}{30}
-\bibcite{liu2014swaphi}{31}
-\bibcite{nair2015active}{32}
-\bibcite{norcott2003iozone}{33}
-\bibcite{de2016cudalign}{34}
-\bibcite{paul2012scalable}{35}
-\bibcite{potter1989array}{36}
-\bibcite{shafiee2016isaac}{37}
-\bibcite{silverberg2010opendedup}{38}
-\bibcite{smith1981identification}{39}
-\bibcite{suh2001pim}{40}
-\bibcite{sura2015data}{41}
-\bibcite{thottethodi2016rowcore}{42}
-\bibcite{wienbrandt2014fpga}{43}
-\bibcite{XbrickSpec}{44}
-\bibcite{yavits2015resistive}{45}
-\bibcite{yavits2015computer}{46}
-\bibcite{zhang2014top}{47}
-\bibcite{zhu2008avoiding}{48}
+\bibcite{lipovski1999dynamic}{31}
+\bibcite{liu2014130}{32}
+\bibcite{liu2014swaphi}{33}
+\bibcite{nair2015active}{34}
+\bibcite{thottethodi2016rowcore}{35}
+\bibcite{norcott2003iozone}{36}
+\bibcite{de2016cudalign}{37}
+\bibcite{paul2012scalable}{38}
+\bibcite{potter1989array}{39}
+\bibcite{shafiee2016isaac}{40}
+\bibcite{silverberg2010opendedup}{41}
+\bibcite{smith1981identification}{42}
+\bibcite{suh2001pim}{43}
+\bibcite{sura2015data}{44}
+\bibcite{wienbrandt2014fpga}{45}
+\bibcite{XbrickSpec}{46}
+\bibcite{yavits2015resistive}{47}
+\bibcite{yavits2015computer}{48}
+\bibcite{zhang2014top}{49}
+\bibcite{zhu2008avoiding}{50}
 \expandafter\ifx\csname c@table@totc\endcsname\relax\newcounter{table@totc}\fi\setcounter{table@totc}{3}
 \expandafter\ifx\csname c@figure@totc\endcsname\relax\newcounter{figure@totc}\fi\setcounter{figure@totc}{9}
