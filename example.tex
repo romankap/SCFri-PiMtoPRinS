@@ -32,11 +32,7 @@
 	\maketitle{}
 	
 	\begin{abstract}
-		
-		\keywords{Content Addressable Memory, Associative Processing, in-storage processing, memristors}
-	\end{abstract}
-	
-	\section*{Abstract}
+
 	\label{sec:abstract}
 	Near-data in-memory processing research has been gaining momentum in recent years. Typical processing-in-memory architecture places a single or several processing elements next to a volatile memory, enabling processing without transferring data to the host CPU. The increased bandwidth to and from volatile memory leads to performance gain. However processing-in-memory does not alleviate von Neumann bottleneck for big data problems, where datasets are too large to fit in main memory. 
 	
@@ -44,7 +40,11 @@
 	
 	We show that ReCAM based processing-in-storage architecture may outperform existing processing-in-memory and accelerator based designs. ReCAM processing-in-storage implementation of Smith-Waterman DNA sequence alignment reaches a speedup of almost five over a GPU cluster. An implementation of in-storage inline data deduplication is presented and shown to achieve orders of magnitude higher throughput than traditional CPU and DRAM based systems.
 	
-	\section{Introduction}
+	\keywords{Content Addressable Memory, Associative Processing, In-Storage Processing, Memristors}
+
+	\end{abstract}
+	
+	\section*{Introduction}
 	\label{sec:motivation}
 	Until the breakdown of Dennard scaling designers focused on improving performance of a single core by increasing instruction level parallelism. In recent years, as Dennard scaling slowed down but Moore's law endured, the focus has shifted to improving parallelism by increasing the number of cores in multicore processors \cite{esmaeilzadeh2011dark}. However, memory bandwidth does not improve at the same rate, making von Neumann bottleneck one of the main performance limiting factors.
 	
@@ -95,11 +95,11 @@
 	%% Near-data PRinS
 	\subsubsection{Near-Data Processing-in-Storage}
 	\label{sec:NDP_PRinS}
-	Flash-based SSD allowed for increased in-storage bandwidth, enabling data port from each chip thus achieving higher data throughput. Typical processing-in-storage architecture places a single or several processing cores inside the storage and allows data processing without transferring it to the host processor. The concept of near-data processing-in-storage is illustrated in Figure \ref{fig:in_vs_near_data}a. 
+	Flash-based SSD allowed for increased in-storage bandwidth, enabling data port from each chip thus achieving higher data throughput. Typical processing-in-storage architecture places a single or several processing cores inside the storage and allows data processing without transferring it to the host processor. The concept of near-data processing-in-storage is illustrated in fig. \ref{fig:in_vs_near_data}a. 
 	
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=0.8]{Figures/In_vs_near_data.jpg}}
-		\caption{Comparison of (a) \textbf{near-data} processing-in-storage (b) and \textbf{in-data} processing-in-storage based on ReCAM.}
+		\caption{Comparison of (a) \textbf{near-data} processing-in-storage (b) and \textbf{in-data} processing-in-storage based on ReCAM}
 		\label{fig:in_vs_near_data}
 	\end{figure}
 	
@@ -110,11 +110,11 @@
 	\section{Processing-in-Storage with ReCAM}
 	\label{sec:PRinS_with_ReCAM}
 	
-	The approach of this work is to design a device for storing big datasets and processing them efficiently. The key properties of this design are scalability and massively parallel processing, possible due to the non-von Neumann architecture. Parallelism is achieved by in-situ processing of the data, in contrast with NDP approaches. In this work, Resistive CAM (ReCAM), a non-volatile and scalable storage device with resistive bitcells and a novel Processing-in-Storage (PRinS) paradigm is presented. The concept is demonstrated in Figure \ref{fig:in_vs_near_data}b.
+	The approach of this work is to design a device for storing big datasets and processing them efficiently. The key properties of this design are scalability and massively parallel processing, possible due to the non-von Neumann architecture. Parallelism is achieved by in-situ processing of the data, in contrast with NDP approaches. In this work, Resistive CAM (ReCAM), a non-volatile and scalable storage device with resistive bitcells and a novel Processing-in-Storage (PRinS) paradigm is presented. The concept is demonstrated in fig. \ref{fig:in_vs_near_data}b.
 	
 	\subsection{ReCAM Crossbar Array}
 	\label{sec:ReCAM_crossbar}
-	While ReRAM may employ one transistor and one memristor (1T1R) cells, ReCAM uses 2T2R cells, following \cite{akinaga2010resistive}. Figure \ref{fig:ReCAM_IC} shows the resistive CAM crossbar. A bitcell, shown in Figure \ref{fig:ReCAM_IC}a, consists of two transistors and two resistive elements (2T2R). The KEY register contains a data word to be written or compared against. The MASK register defines the active columns for write and read operations, enabling bit selectivity. The TAG register (Figure \ref{fig:ReCAM_IC}b) marks the rows that are matched by the compare operation and may be affected by a parallel write. The TAG register enables chaining multiple ReCAM ICs.
+	While ReRAM may employ one transistor and one memristor (1T1R) cells, ReCAM uses 2T2R cells, following \cite{akinaga2010resistive}. Fig. \ref{fig:ReCAM_IC} shows the resistive CAM crossbar. A bitcell, shown in fig. \ref{fig:ReCAM_IC}a, consists of two transistors and two resistive elements (2T2R). The KEY register contains a data word to be written or compared against. The MASK register defines the active columns for write and read operations, enabling bit selectivity. The TAG register (fig. \ref{fig:ReCAM_IC}b) marks the rows that are matched by the compare operation and may be affected by a parallel write. The TAG register enables chaining multiple ReCAM ICs.
 	In a conventional CAM, compare operation is typically followed by a read of the matched data word. When in-storage processing involves arithmetic operations, a compare is usually followed by a parallel write into the unmasked bits of all tagged rows, and additional capabilities, such as read and reduction operations, are included \cite{yavits2015resistive}. 
 	
 	\tab{tab:recam_operations}{Operations included in ReCAM}{
@@ -132,22 +132,22 @@
 	}
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=0.4]{Figures/ReCAM_array.jpg}}
-		\caption{Single ReCAM crossbar integrated circuit. (a) 2T2R ReCAM bitcell. (b) TAG logic.}
+		\caption{Single ReCAM crossbar integrated circuit. (a) 2T2R ReCAM bitcell. (b) TAG logic}
 		\label{fig:ReCAM_IC}
 	\end{figure}
 	
-	Any computational expression can be efficiently implemented in ReCAM storage using line-by-line execution of the truth table of the expression \cite{balasubramonian2014near}. Arithmetic operations are typically performed bit-serially. Table \ref{tab:recam_operations} lists several operations supported by ReCAM and the number of cycles required by each operation.  Shifting down a consecutive block of rows by one row position requires three cycles per bit. First, compare-to-'1' copies the source bit-column of all rows into the TAG. Second, shift moves the TAG vector down by setting the shift-select line (Figure \ref{fig:ReCAM_IC}b). Third, write-'1' copies the shifted TAG to the same bit-column. Shifting 32-bit numbers thus requires 96 cycles. Addition (in-place or not) is performed in a bit-serial manner using a truth table approach \cite{balasubramonian2014near} (32 bits times 8 truth-table rows times 2 for compare and write amount to 512 cycles). Row-wise maximum compares in parallel two 32-bit numbers in each row. Max Scalar tags all rows that contain the maximal value in the selected element. Additional operations, such as parallel and reduction arithmetic, may be required for other algorithms. 
+	Any computational expression can be efficiently implemented in ReCAM storage using line-by-line execution of the truth table of the expression \cite{balasubramonian2014near}. Arithmetic operations are typically performed bit-serially. Table \ref{tab:recam_operations} lists several operations supported by ReCAM and the number of cycles required by each operation.  Shifting down a consecutive block of rows by one row position requires three cycles per bit. First, compare-to-'1' copies the source bit-column of all rows into the TAG. Second, shift moves the TAG vector down by setting the shift-select line (fig. \ref{fig:ReCAM_IC}b). Third, write-'1' copies the shifted TAG to the same bit-column. Shifting 32-bit numbers thus requires 96 cycles. Addition (in-place or not) is performed in a bit-serial manner using a truth table approach \cite{balasubramonian2014near} (32 bits times 8 truth-table rows times 2 for compare and write amount to 512 cycles). Row-wise maximum compares in parallel two 32-bit numbers in each row. Max Scalar tags all rows that contain the maximal value in the selected element. Additional operations, such as parallel and reduction arithmetic, may be required for other algorithms. 
 	
 	
 	\subsection{System Architecture}
 	\label{sec:system_architecture}
-	Conceptually, the ReCAM comprises hundreds of millions of rows, each serving as a computational unit. Due to power die restrictions, the entire array may be divided into multiple smaller ICs, as in Figure \ref{fig:ReCAM_system}a. A row is fully contained within an IC. All ICs are daisy chained for Shift and Max Scalar operations.
-	The ReCAM storage system uses a microcontroller (Figure \ref{fig:ReCAM_system}b) similar to \cite{guo2013ac}. It issues instructions, sets the KEY and MASK registers, handles control sequences and executes read requests. In addition, the microcontroller may also perform some baseline processing, such as normalization of the reduction tree results.
+	Conceptually, the ReCAM comprises hundreds of millions of rows, each serving as a computational unit. Due to power die restrictions, the entire array may be divided into multiple smaller ICs, as in fig. \ref{fig:ReCAM_system}a. A row is fully contained within an IC. All ICs are daisy chained for Shift and Max Scalar operations.
+	The ReCAM storage system uses a microcontroller (fig. \ref{fig:ReCAM_system}b) similar to \cite{guo2013ac}. It issues instructions, sets the KEY and MASK registers, handles control sequences and executes read requests. In addition, the microcontroller may also perform some baseline processing, such as normalization of the reduction tree results.
 	ReCAM-based storage is scalable due to its inherent parallelism. It allows for scalability by adding more ICs and increasing storage capacity at no performance cost since compute capability is linearly scalable in the number of ICs. Therefore, processing in-storage of large data sets does not require ReCAM for external communication, in contrast to datacenter-scale storage. 
 	
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=0.5]{Figures/ReCAM_Single_IC_Column.jpg}}
-		\caption{Complete ReCAM-based Storage system, composed of (a) separate multiple daisy-chained ICs and (b) Microcontroller. Connected to the multiple ICs with a reduction tree network.}
+		\caption{Complete ReCAM-based Storage system, composed of (a) separate multiple daisy-chained ICs and (b) Microcontroller. Connected to the multiple ICs with a reduction tree network}
 		\label{fig:ReCAM_system}
 	\end{figure}
 	
@@ -159,11 +159,11 @@
 	
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=0.6]{Figures/SW_on_ReCAM_Figure.jpg}}
-		\caption{Mapping the dynamic programming matrix on ReCAM. (a) A snapshot of the dynamic programming matrix, shows the direction of progress for the parallel algorithm. (b) and (c) shows an example of organization of data in the ReCAM crossbar array at the beginning (b) and end (c) of an iteration. AD[2] contents in (b) is being replaced with the new result (c). Bottom rows in a crossbar IC are daisy-chained to the next IC in a shift instruction. The cell marked with X contains the global maxmium score.}
+		\caption{Mapping the dynamic programming matrix on ReCAM. (a) A snapshot of the dynamic programming matrix, shows the direction of progress for the parallel algorithm. (b) and (c) shows an example of organization of data in the ReCAM crossbar array at the beginning (b) and end (c) of an iteration. AD[2] contents in (b) is being replaced with the new result (c). Bottom rows in a crossbar IC are daisy-chained to the next IC in a shift instruction. The cell marked with X contains the global maxmium score}
 		\label{fig:SWonReCAM}
 	\end{figure}
 	
-	Figure \ref{fig:SWonReCAM}a shows a snapshot of the scoring matrix during the algorithm execution. In a parallel implementation, the matrix is filled along the main diagonal and the entire anti-diagonal scores are calculated in parallel. Figure \ref{fig:SWonReCAM}b shows the ReCAM memory map of two consecutive ICs at the beginning of an iteration. A and B contain the sequences, where each base-pair takes 2-bit and resides in a separate row. E and F are partial score results of the affine gap model \cite{gotoh1982improved}. AD[0], AD[1] and AD[2] contain scoring matrix anti-diagonals. Scores are represented by 32-bit integers. Shift operations in the PRinS implementation move data between rows inside an IC and between daisy-chained ICs. Figure \ref{fig:SWonReCAM}c shows the ReCAM memory map at the end of an iteration and the mapping between ReCAM and the scoring matrix. A complete description of the S-W PRinS implementation appears in \cite{kaplan2017resistive}.
+	Fig. \ref{fig:SWonReCAM}a shows a snapshot of the scoring matrix during the algorithm execution. In a parallel implementation, the matrix is filled along the main diagonal and the entire anti-diagonal scores are calculated in parallel. Fig. \ref{fig:SWonReCAM}b shows the ReCAM memory map of two consecutive ICs at the beginning of an iteration. A and B contain the sequences, where each base-pair takes 2-bit and resides in a separate row. E and F are partial score results of the affine gap model \cite{gotoh1982improved}. AD[0], AD[1] and AD[2] contain scoring matrix anti-diagonals. Scores are represented by 32-bit integers. Shift operations in the PRinS implementation move data between rows inside an IC and between daisy-chained ICs. Fig. \ref{fig:SWonReCAM}c shows the ReCAM memory map at the end of an iteration and the mapping between ReCAM and the scoring matrix. A complete description of the S-W PRinS implementation appears in \cite{kaplan2017resistive}.
 	
 	\subsection{simulation and comparison to state-of-the-art}
 	\label{sec:SW_simulation}
@@ -210,11 +210,11 @@
 	
 	\subsection{Related Work: Conventional Deduplication}
 	
-	In a typical inline storage deduplication system (comprising disk / SSD storage, CPU and DRAM for holding indices and tables), the basic deduplication data unit is termed a chunk. Upon writing a new data chunk to storage, comparing the chunk contents (typically 4-8 KByte) to the entire storage is infeasible. Instead, a much shorter representation, called a fingerprint or hash (e.g., 20-byte SHA-1 hash) is calculated for each chunk, and the fingerprint is looked up in a chunk index. If no entry is found, the chunk is stored and a new entry is added to the chunk index. In addition to the fingerprint, the index entry also holds at least the chunk's PA and the number of references to it (Figure \ref{fig:dedup_PC}). If the fingerprint of the new chunk is found, its number of references is incremented. An additional address translation table holds both the LBA and the PA of each chunk.
+	In a typical inline storage deduplication system (comprising disk / SSD storage, CPU and DRAM for holding indices and tables), the basic deduplication data unit is termed a chunk. Upon writing a new data chunk to storage, comparing the chunk contents (typically 4-8 KByte) to the entire storage is infeasible. Instead, a much shorter representation, called a fingerprint or hash (e.g., 20-byte SHA-1 hash) is calculated for each chunk, and the fingerprint is looked up in a chunk index. If no entry is found, the chunk is stored and a new entry is added to the chunk index. In addition to the fingerprint, the index entry also holds at least the chunk's PA and the number of references to it (fig. \ref{fig:dedup_PC}). If the fingerprint of the new chunk is found, its number of references is incremented. An additional address translation table holds both the LBA and the PA of each chunk.
 	
 	\begin{figure}[ht!]
 		\centerline{\includegraphics[scale=0.5]{Figures/dedup_PC.jpg}}
-		\caption{Conventional deduplication scheme after writing the following sequence of (data block, LBA): (A, x), (A, y), (B, y+1), (C, y+2). The storage, chunk index and address translation table reside in the physical layer.}
+		\caption{Conventional deduplication scheme after writing the following sequence of (data block, LBA): (A, x), (A, y), (B, y+1), (C, y+2). The storage, chunk index and address translation table reside in the physical layer}
 		\label{fig:dedup_PC}
 	\end{figure}
 	
@@ -226,11 +226,11 @@
 	\subsection{In-Storage ReCAM-Based Deduplication}
 	
 	
-	The proposed ReCAM based inline deduplication requires neither external CPU nor DRAM. The deduplication is accomplished entirely within the ReCAM, using its in-storage processing capabilities. ReCAM based deduplication is illustrated in Figure \ref{fig:dedup_ReCAM}. Each data block in ReCAM storage is divided into $S=(block\_size)/(ReCAM\_width)$ row-segments of $ReCAM\_width$ size. For example, for 256-bit wide ReCAM and 4KB blocks, the number of segments is $S=128$. Data blocks are stored in ReCAM in segment by segment fashion, in $S$ consecutive ReCAM rows. The first segment of each data block is marked by '1' in the block\_start bit column. The values of $block\_start$ in all other ReCAM rows of the data block are zero. 
+	The proposed ReCAM based inline deduplication requires neither external CPU nor DRAM. The deduplication is accomplished entirely within the ReCAM, using its in-storage processing capabilities. ReCAM based deduplication is illustrated in fig. \ref{fig:dedup_ReCAM}. Each data block in ReCAM storage is divided into $S=(block\_size)/(ReCAM\_width)$ row-segments of $ReCAM\_width$ size. For example, for 256-bit wide ReCAM and 4KB blocks, the number of segments is $S=128$. Data blocks are stored in ReCAM in segment by segment fashion, in $S$ consecutive ReCAM rows. The first segment of each data block is marked by '1' in the block\_start bit column. The values of $block\_start$ in all other ReCAM rows of the data block are zero. 
 	
 	\begin{figure}[ht!]
 		\centerline{\includegraphics[scale=0.5]{Figures/dedup_ReCAM.jpg}}
-		\caption{ReCAM based deduplication scheme, following the same sequence of writes as in Figure \ref{fig:dedup_PC}.}
+		\caption{ReCAM based deduplication scheme, following the same sequence of writes as in fig. \ref{fig:dedup_PC}}
 		\label{fig:dedup_ReCAM}
 	\end{figure}
 	
@@ -239,7 +239,7 @@
 	
 	\subsubsection{ReCAM-Based Deduplication Algorithm}
 	
-	Figure \ref{fig:dedup_alg} shows the pseudo code for the ReCAM implementation of the three main deduplication functions: write, read and delete.
+	Fig. \ref{fig:dedup_alg} shows the pseudo code for the ReCAM implementation of the three main deduplication functions: write, read and delete.
 	
 	During write, a new data block is compared (in parallel) against all data blocks stored in the ReCAM. This is achieved by a sequence of one single compare followed by $S-1$ continuous compare operations. During the single compare, the $start_block$ bit column is masked-on, to enable comparison of only the first segment of each data block in the storage. During the following $S-1$ continuous compare, the result (TAG) of every consecutive compare is ANDed with the result of the previous compare. Thus, in each compare, only the rows matched in the previous compare are active, and the number of active rows drops progressively, significantly reducing the compare energy. In both cases (unique and duplicate), the LBA of the data block is placed together with its PA in an associative address translation table, which can be stored in a separate module of the ReCAM storage. The translation table mapping can be optimized to eliminate storing multiple copies of the same PA (of duplicated blocks). Overall, write takes $O(S)$ cycles.  
 	
@@ -305,7 +305,7 @@
 		\end{mdframed}
 		%\end{algorithm}
 		
-		\caption{Associative Write, Read and Delete in ReCAM-based data deduplication.}
+		\caption{Associative Write, Read and Delete in ReCAM-based data deduplication}
 		\label{fig:dedup_alg}
 	\end{figure}
 	
@@ -320,19 +320,19 @@
 	
 	As demonstrated by ‎\cite{zhu2008avoiding}, real-world workloads have high variability in the percentage of duplicate data. Our goal is to exhaustively examine ReCAM performance and energy consumption. Therefore we use a suite of artificial workloads with a varying degree of duplication ratio. It allows us to control both the workload and the mainline system parameters. Both opendedup and ReCAM deduplicate all duplicate blocks.
 	
-	The simulated write throughput as a function of percentage of deduplicated blocks is presented in Figure \ref{fig:dedup_performance}. The measured throughput of opendedup is also presented in Figure \ref{fig:dedup_performance} for comparison. The ReCAM throughput increases with the percentage of duplicate blocks, as the number of writes drops. For 8KB data blocks, ReCAM storage reaches 2.2M IOPS for 30\% duplicate blocks. For comparison, high-end all-flash X-brick storage appliance reaches 150K IOPS in 30\% write, 70\% read operation \cite{XbrickSpec}, similar to the simulated performance of opendedup. 
+	The simulated write throughput as a function of percentage of deduplicated blocks is presented in fig. \ref{fig:dedup_performance}. The measured throughput of opendedup is also presented in fig. \ref{fig:dedup_performance} for comparison. The ReCAM throughput increases with the percentage of duplicate blocks, as the number of writes drops. For 8KB data blocks, ReCAM storage reaches 2.2M IOPS for 30\% duplicate blocks. For comparison, high-end all-flash X-brick storage appliance reaches 150K IOPS in 30\% write, 70\% read operation \cite{XbrickSpec}, similar to the simulated performance of opendedup. 
 	
-	The simulated energy consumption of ReCAM based deduplication as a function of percentage of deduplicated blocks is presented in Figure \ref{fig:dedup_energy}. The measured energy consumption of opendedup (including the SSD energy consumption) is also presented in Figure \ref{fig:dedup_energy} for comparison. The energy consumption of ReCAM based deduplication is in the same range (slightly higher for smaller blocks, lower for larger blocks).
+	The simulated energy consumption of ReCAM based deduplication as a function of percentage of deduplicated blocks is presented in fig. \ref{fig:dedup_energy}. The measured energy consumption of opendedup (including the SSD energy consumption) is also presented in fig. \ref{fig:dedup_energy} for comparison. The energy consumption of ReCAM based deduplication is in the same range (slightly higher for smaller blocks, lower for larger blocks).
 	
 	\begin{figure}[ht!]
 		\centerline{\includegraphics[scale=1]{Figures/dedup_perf.jpg}}
-		\caption{Write performance for different block sizes vs. percentage of deduplicated blocks, for data blocks of 1KB, 2KB, 4KB and 8KB (OPNDDP = Opendedup).}
+		\caption{Write performance for different block sizes vs. percentage of deduplicated blocks, for data blocks of 1KB, 2KB, 4KB and 8KB (OPNDDP = Opendedup)}
 		\label{fig:dedup_performance}
 	\end{figure}
 	
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=1]{Figures/dedup_energy.jpg}}
-		\caption{Deduplication energy for different block sizes vs. percentage of deduplicated blocks, for data blocks of 1KB, 2KB, 4KB and 8KB while writing 50GByte of data.}
+		\caption{Deduplication energy for different block sizes vs. percentage of deduplicated blocks, for data blocks of 1KB, 2KB, 4KB and 8KB while writing 50GByte of data}
 		\label{fig:dedup_energy}
 	\end{figure}
 	
