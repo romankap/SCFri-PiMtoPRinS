@@ -312,13 +312,13 @@
 	
 	\subsection{In-Storage Deduplication Evaluations}
 	
-	We simulate the ReCAM based deduplication using the cycle-accurate CAM simulator introduced in \cite{yavits2015resistive}, employing ReCAM performance and power figures obtained by SPICE simulations. During ReCAM execution we record and count all operations (compare, write and delete).  The simulated ReCAM size is 256GB, running at 1GHz. External data throughput is assumed non-limiting (contemporary interconnect such as multi-lane PCIe is capable of supporting in excess of 2.2M IOPS).
+	We simulate the ReCAM based deduplication using the cycle-accurate CAM simulator introduced in \cite{yavits2015resistive}, employing ReCAM performance and power figures obtained by SPICE simulations. During ReCAM execution we record and count all operations (compare, write and delete). The simulated ReCAM size is 256GB, running at 1GHz. External data throughput is assumed non-limiting (contemporary interconnect such as multi-lane PCIe is capable of supporting in excess of 2.2M IOPS).
 	
-	We compare our ReCAM deduplication implementation with opendedup ‎\cite{silverberg2010opendedup}, which supports inline deduplication and runs on top of the local filesystem. It allows for either variable or fixed-size blocks and does not limit the amount of stored data. In our analysis, block sizes of 1KB, 2KB, 4KB and 8KB were used. In addition, we used opendedup on a server with four octa-core Intel Xeon E5-4650 CPUs with 64GB of RAM and 800GB Intel SSD DC P3700 drive.
+	We compare our ReCAM deduplication implementation with opendedup \cite{silverberg2010opendedup}, which supports inline deduplication and runs on top of the local filesystem. It allows for either variable or fixed-size blocks and does not limit the amount of stored data. In our analysis, block sizes of 1KB, 2KB, 4KB and 8KB were used. In addition, we used opendedup on a server with four octa-core Intel Xeon E5-4650 CPUs with 64GB of RAM and 800GB Intel SSD DC P3700 drive.
 	
 	To evaluate the performance and energy consumption of opendedup,the file system benchmark IOzone was used \cite{norcott2003iozone}. IOzone allows writing data chunks with fixed number of duplicate parts, to control the degree of deduplication. All runs include writing of 50GB of data, with varying percentage of duplicate blocks. Each test was repeated with inline deduplication on and off, to isolate the CPU and DRAM energy consumptions during deduplication. Intel performance counter monitor \cite{intelPCM} was used for measurements. 
 	
-	As demonstrated by ‎\cite{zhu2008avoiding}, real-world workloads have high variability in the percentage of duplicate data. Our goal is to exhaustively examine ReCAM performance and energy consumption. Therefore we use a suite of artificial workloads with a varying degree of duplication ratio. It allows us to control both the workload and the mainline system parameters. Both opendedup and ReCAM deduplicate all duplicate blocks.
+	As demonstrated by \cite{zhu2008avoiding}, real-world workloads have high variability in the percentage of duplicate data. Our goal is to exhaustively examine ReCAM performance and energy consumption. Therefore we use a suite of artificial workloads with a varying degree of duplication ratio. It allows us to control both the workload and the mainline system parameters. Both opendedup and ReCAM deduplicate all duplicate blocks.
 	
 	The simulated write throughput as a function of percentage of deduplicated blocks is presented in fig. \ref{fig:dedup_performance}. The measured throughput of opendedup is also presented in fig. \ref{fig:dedup_performance} for comparison. The ReCAM throughput increases with the percentage of duplicate blocks, as the number of writes drops. For 8KB data blocks, ReCAM storage reaches 2.2M IOPS for 30\% duplicate blocks. For comparison, high-end all-flash X-brick storage appliance reaches 150K IOPS in 30\% write, 70\% read operation \cite{XbrickSpec}, similar to the simulated performance of opendedup. 
 	
@@ -337,7 +337,7 @@
 	\end{figure}
 	
 	
-	\section{Conclusions}
+	\section*{Conclusions}
 	
 	Processing-in-memory does not address the bandwidth bottleneck problem when solving big data workloads. We propose a novel in-data processing-in-storage architecture based on Resistive Content Addressable Memory (ReCAM). It enables mass storage with in-data associative processing capabilities. ReCAM storage contains billions of data rows, each row serving as an associative processing unit. ReCAM requires no in-storage processing cores external to the storage arrays. There is no data transfer outside the storage arrays. Therefore, the internal bandwidth of the resistive memory based storage can be utilized to its fullest extent, considerably improving computation throughput of processing-in-storage system.
 	
