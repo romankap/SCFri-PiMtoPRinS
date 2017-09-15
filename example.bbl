@@ -96,15 +96,15 @@ Farmahini-Farahani, A., Ahn, J.H., Morrow, K., Kim, N.S.: Nda: Near-dram
 Foster, C.C.: Content addressable parallel processors. John Wiley \& Sons, Inc.
   (1976)
 
+\bibitem{gao2016hrl}
+Gao, M., Kozyrakis, C.: Hrl: Efficient and flexible reconfigurable logic for
+  near-data processing. In: 2016 IEEE International Symposium on High
+  Performance Computer Architecture (HPCA). pp. 126--137 (March 2016)
+
 \bibitem{gao2015practical}
 Gao, M., Ayers, G., Kozyrakis, C.: Practical near-data processing for in-memory
   analytics frameworks. In: Parallel Architecture and Compilation (PACT), 2015
   International Conference on. pp. 113--124. IEEE (2015)
-
-\bibitem{gao2016hrl}
-Gao, M., Kozyrakis, C.: Hrl: efficient and flexible reconfigurable logic for
-  near-data processing. In: High Performance Computer Architecture (HPCA), 2016
-  IEEE International Symposium on. pp. 126--137. Ieee (2016)
 
 \bibitem{gokhale1995processing}
 Gokhale, M., Holmes, B., Iobst, K.: Processing in memory: The terasys massively
@@ -145,8 +145,8 @@ Kang, Y., Kee, Y.s., Miller, E.L., Park, C.: Enabling cost-effective data
 
 \bibitem{kaplan2017resistive}
 Kaplan, R., Yavits, L., Ginosar, R., Weiser, U.: A resistive cam
-  processing-in-storage architecture for dna sequence alignment. arXiv preprint
-  arXiv:1701.04723  (2017)
+  processing-in-storage architecture for dna sequence alignment. IEEE Micro
+  37(4),  20--28 (2017)
 
 \bibitem{kaplan2016deduplication}
 Kaplan, R., Yavits, L., Morad, A., Ginosar, R.: Deduplication in resistive
@@ -222,8 +222,8 @@ Smith, T.F., Waterman, M.S.: Identification of common molecular subsequences.
 
 \bibitem{suh2001pim}
 Suh, J., Li, C., Crago, S.P., Parker, R.: A pim-based multiprocessor system.
-  In: Parallel and Distributed Processing Symposium., Proceedings 15th
-  International. pp. 6--pp. IEEE (2001)
+  In: Proceedings 15th International Parallel and Distributed Processing
+  Symposium. IPDPS 2001. pp. 6 pp.-- (Apr 2001)
 
 \bibitem{sura2015data}
 Sura, Z., Jacob, A., Chen, T., Rosenburg, B., Sallenave, O., Bertolli, C.,
@@ -243,7 +243,7 @@ XtremIO, E.: {X-Brick tech spec.}
 
 \bibitem{yavits2015resistive}
 Yavits, L., Kvatinsky, S., Morad, A., Ginosar, R.: Resistive associative
-  processor. IEEE Computer Architecture Letters  14(2),  148--151 (2015)
+  processor. IEEE Computer Architecture Letters  14(2),  148--151 (July 2015)
 
 \bibitem{yavits2015computer}
 Yavits, L., Morad, A., Ginosar, R.: Computer architecture with associative
